@@ -1,0 +1,793 @@
+<?xml version="1.0" encoding="utf-8"?>
+<components xmlns="http://www.imeta.org/meta"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://www.imeta.org/meta http://upsms.yonyouup.com/meta.xsd">
+    <references>
+        <reference file="java.xml"/>
+        <reference file="base.xml"/>
+		<reference file="vendor.xml"></reference>
+		<!-- <reference file="warehouse.xml"></reference> -->
+        <reference file="pc.userdefine.xml"></reference>
+    </references>
+	<component name="product" moduleName="aa" title="物料" domain="productcenter">
+		<enum name="CreatorType" title="档案类型">
+			<item name="tenant" value="0" title="租户"></item>
+			<item name="org" value="1" title="组织"></item>
+			<item name="jiameng" value="2" title="加盟商"></item>
+		</enum>
+		<enum name="ProcessType" title="加工方式">
+            <item name="prefabricate" value="0" title="预制"></item>
+            <item name="made_on_site" value="1" title="现制"></item>
+            <item name="customized" value="2" title="定制"></item>
+        </enum>
+		<enum name="CheckFreeType" title="规格核算方式">
+			<item name="noCheck" title="不按规格核算" value="0"></item>
+			<item name="check" title="指定规格核算" value="1"></item>
+			<item name="checkAll" title="按SKU核算" value="2"></item>
+		</enum>
+		<enum name="DeliverQuantityChange" title="交货数量改变时">
+			<item name="reCalMoney" title="单价不变重算金额" value="1"></item>
+			<item name="reCalPrice" title="金额不变重算单价" value="1"></item>
+		</enum>
+        <enum name="UnitExchangeType" title="辅计量单位换算方式">
+            <item name="fixed" value="0" title="固定换算"></item>
+            <item name="floating" value="1" title="浮动换算"></item>
+        </enum>
+		<class name="Product" title="物料" tableName="productView" isview="true">
+			<attributes>
+				<attribute type="Long" title="主键" name="id" columnName="id" isKey="true"></attribute>
+				<attribute type="String" title="编码" name="cCode" columnName="code" iLength="255"></attribute>
+				<attribute type="String" title="名称" name="cName" columnName="name" iLength="255" is_mul_language="true"></attribute>
+				<attribute type="String" title="简称" name="abbreviation" columnName="shortName" iLength="255"></attribute>
+				<attribute type="Decimal" title="零售价" name="fSalePrice" columnName="fSalePrice"></attribute>
+			  	<attribute type="Decimal" title="建议零售价" name="markPrice" columnName="fMarkPrice"></attribute>
+			 	<attribute type="Decimal" title="进货价格" name="primeCosts" columnName="fPrimeCosts"></attribute>
+				<attribute type="rm.archive.Coupon" title="卡券" name="couponId" columnName="couponId" iLength="20"></attribute>
+				<attribute type="Integer" title="卡券类型" name="couponType" columnName="couponType" iLength="2"></attribute>
+				<attribute type="ProductClass" title="分类" name="productClass" columnName="oProductClass_id"></attribute>
+				<attribute type="ManageClass" title="库存物料分类" name="manageClass" columnName="manageClass"></attribute>
+				<attribute type="ManageClass" title="物料分类" name="manageClass" columnName="oManageClass_id"></attribute>
+				<attribute type="ProductBrand" title="品牌" name="productBrand" columnName="brand_id"></attribute>
+				<attribute type="ProductUnit" title="单位主键" name="oUnitId" columnName="oUnit_id"></attribute>
+				<attribute type="DateTime" title="时间戳" name="pubuts" columnName="pubts"></attribute>
+				<attribute type="String" title="erp编码" name="erpCode" columnName="erpCode" iLength="255"></attribute>
+				<attribute type="SpecPropertyTemplate" title="物料类型" name="specPropertyTemplate" columnName="oSPTemplate_id"></attribute>
+				<attribute type="Integer" title="物料属性" name="realProductAttribute" columnName="realProductAttribute"></attribute>
+				<attribute type="Integer" title="实物商品属性" name="realProductAttributeType" columnName="realProductAttributeType" defaultValue="0"></attribute><!--1：普通商品；2：实体卡券；3：实体储值卡 -->
+				<attribute type="Integer" title="虚拟物料属性" name="virtualProductAttribute" columnName="virtualProductAttribute"></attribute><!--1：储值卡；2：礼品卡；3：卡券；4：其他；7：服务  -->
+				<attribute type="Integer" title="是否删除" name="deleted" columnName="iDeleted" isPartition="true" defaultValue="0"></attribute>
+				<attribute type="Integer" title="上下架状态" name="status" columnName="iStatus"></attribute>
+				<attribute type="String" title="规格" name="modelDescription" columnName="cModelDescription" is_mul_language="true"></attribute>
+				<attribute type="String" title="型号" name="model" columnName="cModel" iLength="255" is_mul_language="true"/><!--规格型号拆分-->
+				<!-- 新物料中心修改：根组织物料就是租户级物料 -->
+				<attribute type="CreatorType" title="创建者类型" name="creatorType" columnName="rangeType" iLength="1"></attribute><!--0:租户（根组织）、1:组织、2:加盟商（客户）、3:入驻商家 默认值为0-->
+                <attribute type="aa.org.Org" title="创建者组织" name="orgId" columnName="range_orgId"></attribute>
+                <attribute type="aa.merchant.Merchant" title="创建者客户" name="cust" columnName="range_customerId"></attribute>
+                <!--<attribute type="aa.archive.Shop" title="创建者商家" name="shop" columnName="iShopID"></attribute> 零售不关心，所以注释掉-->
+				<attribute type="String" title="物料首图片" name="defaultAlbumId" columnName="url" iLength="255"></attribute>
+				<!-- 新添加字段，前端可能会需要 -->
+				<attribute type="String" title="物料简称" name="shortName" columnName="shortName" iLength="255"></attribute>
+				<!-- 新加字段 -->
+				<attribute type="Integer" title="物料来源" name="source" columnName="source" iLength="1" defaultValue="0" ></attribute> <!--0:UI界面录入 1：导入保存 2：U8API导入保存 3：NCAPI导入保存-->
+				<attribute type="ProductSKU" title="默认SKUID" name="defaultSKUId" columnName="defaultSKUId" isRedundant="true"></attribute><!--冗余--><!--取系统生成的sku-->
+				<!-- 税目相关 -->
+				<attribute type="String" title="开票名称" name="receiptName" columnName="receiptName" iLength="255"></attribute>
+				<attribute type="bd.taxrate.TaxRateVO" title="销项税率（%）" name="outTaxrate" columnName="outTaxrate"  iLength="255"></attribute>
+				<attribute type="bd.taxrate.TaxRateVO" title="进项税率（%）" name="inputTax" columnName="inTaxrate"  iLength="255"></attribute>
+				<attribute type="pc.tax.TaxRevenue" title="税收分类码" name="taxClass" columnName="taxClass" iLength="50"></attribute>
+				<attribute type="ShopProduct" name="shopProduct" title="商家物料" isDesign="false"></attribute>
+				<attribute type="ProductCheckFree" name="productCheckFrees" title="商家规格核算维度" isDesign="false"></attribute>
+				<attribute type="ProductSKU" name="productskus" title="商品sku" isDesign="false"></attribute>
+				<attribute type="ProductApplyRange" name="productApplyRanges" title="分配范围" isDesign="false"></attribute>
+				<attribute type="String" title="条码" name="barCode" columnName="cBarCode" iLength="255"></attribute>
+			</attributes>
+		</class>
+		
+		<class name="ProductSKU" title="物料SKU" tableName="productSkuView" isView="true">
+			<attributes>
+				<attribute type="String" title="sku名称" name="skuName" columnName="name" iLength="255" is_mul_language="true"></attribute>
+				<attribute type="String" title="sku简称" name="skuAbbreviation" columnName="shortName" iLength="255"></attribute>
+				<attribute type="String" title="erp编码" name="erpCode" columnName="erpCode" iLength="255"></attribute>
+				<attribute type="Integer" title="是否SKU" name="isSKU" columnName="isSKU"  defaultValue="1" iLength="1"></attribute>
+				<attribute type="Long" title="主键" name="id" columnName="id" isKey="true"></attribute>
+				<attribute type="String" title="编码" name="cCode" columnName="code" iLength="255"></attribute>
+				<attribute type="Product" title="所属物料" name="product" columnName="productId"></attribute>
+				<attribute type="Decimal" title="零售价" name="salePrice" columnName="fSalePrice"></attribute>
+				<attribute type="Decimal" title="建议零售价" name="markPrice" columnName="fMarkPrice"></attribute>
+				<attribute type="Decimal" title="进货价格" name="primeCosts" columnName="fPrimeCosts"></attribute>
+				<attribute type="String" title="条码" name="barCode" columnName="cBarCode" iLength="255"></attribute>
+				<attribute type="Decimal" title="库存" name="inventoryCount" columnName="lInventoryCount"></attribute>
+				<attribute type="Integer" title="积分数量" name="salePoints" columnName="salePoints"></attribute>
+				<attribute type="Integer" title="上下架状态" name="status" columnName="iStatus"></attribute>
+				<attribute type="Integer" title="已售标记" name="saled" columnName="iSaled"></attribute>
+				<attribute type="Integer" title="是否删除" name="deleted" columnName="iDeleted" isPartition="true" defaultValue="0"></attribute>
+				<attribute type="String" title="规格ID" name="specIds" columnName="cSpecIds" iLength="700"></attribute>
+				<attribute type="String" title="规格" name="cSpecs" columnName="cSpecs" iLength="255"></attribute>
+				<attribute type="String" title="规格型号" name="modelDescription" columnName="cModelDescription"></attribute>
+				<attribute type="Decimal" name="noTaxCostPrice" title="参考成本" columnName="fNoTaxCostPrice" iScale="8" iPrecision="19"></attribute>
+				<attribute type="Decimal" name="weight" title="库存-重量" columnName="weight" iScale="8" iPrecision="19"></attribute>
+				<attribute type="ShopProductSKU" name="shopProductSku" title="商家sku" isDesign="false"></attribute>
+				<attribute type="pc.unit.Unit" title="包装单位" name="batchUnit" columnName="batchUnitId" iLength="20"></attribute>
+			</attributes>
+		</class>
+		
+		<!-- 物料类型表 -->
+		<class name="SpecPropertyTemplate" title="物料模板" tableName="product_tpl">
+			<attributes>
+				<attribute type="Long" title="主键" name="id" columnName="id" isKey="true"></attribute>
+				<attribute type="DateTime" title="时间戳" name="pubts" columnName="pubts"></attribute>
+				<attribute type="String" title="名称" name="name" columnName="cName" iLength="255"></attribute>
+				<attribute type="Long" title="" name="dlyFreeRuleId" columnName="dlyFreeRuleId"></attribute>
+				<attribute type="Integer" title="是否删除" name="deleted" columnName="iDeleted" isPartition="true" defaultValue="0"></attribute>
+				<attribute type="Short" title="" name="isReservationServices" columnName="isReservationServices"></attribute>
+			    <attribute type="Long" title="所属公司" name="iCorpId" columnName="iCorpId"></attribute>
+			</attributes>
+		</class>
+		<!-- 规格项表 -->
+		<class name="Specification" title="规格项" tableName="userdef_base">
+			<attributes>
+				<attribute type="Long" title="主键" name="id" columnName="id" isKey="true"></attribute>
+				<attribute type="DateTime" title="时间戳" name="pubts" columnName="pubts"></attribute>
+				<attribute type="String" title="erp编码" name="erpCode" columnName="cErpCode" iLength="255"></attribute>
+				<attribute type="String" title="描述" name="memo" columnName="userdef_desc" iLength="255"></attribute>
+				<attribute type="String" title="编码" name="freeId" columnName="defineId" iLength="255"></attribute>
+				<attribute type="String" title="规格项名称" name="name" columnName="showItem" iLength="255"></attribute>
+				<attribute type="Integer" title="是否删除" name="deleted" columnName="iDeleted" isPartition="true" defaultValue="0"></attribute>
+				<attribute type="Integer" title="顺序" name="order" columnName="ordernum"></attribute>
+				<attribute type="String" title="分类" name="classId" columnName="classId" iLength="255"></attribute>
+				<attribute type="Boolean" title="是否启用" name="isEnabled" columnName="isEnabled"></attribute>
+				<attribute type="Boolean" title="是否适用零售" name="isShowSpec" columnName="isShowSpec"></attribute>
+			</attributes>
+		</class>
+		<!-- 规格值表  -->
+		<class name="Specitem" title="规格值" tableName="userdefine">
+			<attributes>
+				<attribute type="Long" title="主键" name="id" columnName="id" isKey="true"></attribute>
+				<attribute type="DateTime" title="时间戳" name="pubts" columnName="pubts"></attribute>
+				<attribute type="String" title="规格值商家名称" name="erpName" columnName="erp_name" iLength="255"></attribute>
+				<attribute type="String" title="规格名称" name="specItemName" columnName="name" iLength="255"></attribute>
+				<attribute type="Integer" title="顺序" name="order" columnName="orderNum"></attribute>
+				<attribute type="Specification" title="所属规格项" name="specification" columnName="userdefid"></attribute>
+			</attributes>
+		</class>
+		
+		<!-- 类型与规格关联表 -->
+		<class name="SptemplateSpec" title="类型与规格关联表" tableName="product_tpl_spec">
+			<attributes>
+				<attribute type="Long" title="主键" name="id" columnName="id" isKey="true"></attribute>
+				<attribute type="DateTime" title="时间戳" name="pubts" columnName="pubts"></attribute>
+				<attribute type="Integer" title="顺序" name="order" columnName="iOrder"></attribute>
+				<attribute type="SpecPropertyTemplate" title="物料类型" name="specPropertyTemplate" columnName="tpl_id"></attribute>
+				<attribute type="Specification" title="规格项主键" name="specification" columnName="spec_id"></attribute>
+				<attribute type="Specitem" title="规格值主键" name="specitem" columnName="specitem_id"></attribute>
+				<attribute name="iDeleted" columnName="iDeleted" title="逻辑删除标记" type="Boolean" defaultValue="false" isPartition="true" />
+			</attributes>
+		</class>
+		
+		<class name="ProductSpecItem" title="商品sku规格" tableName="productspecitem">
+			<attributes>
+				<attribute type="Long" title="商品ID" name="productId" columnName="productId"></attribute>
+				<attribute type="Long" title="规格ID" name="iSpecId" columnName="iSpecId"></attribute>
+				<attribute type="Long" title="规格值ID" name="iSpecItemsId" columnName="lsSpecItems_id"></attribute>
+			</attributes>
+		</class>
+		
+		<class name="ProductBrand" title="商品品牌" tableName="brand">
+			<attributes>
+				<attribute type="Long" title="主键" name="id" columnName="id" isKey="true"></attribute>
+				<attribute type="Text" title="品牌描述" name="brandDesc" columnName="brand_desc"></attribute>
+				<attribute type="String" title="品牌关键字" name="brandKeywords" columnName="rand_keywords" iLength="255"></attribute>
+				<attribute type="String" title="品牌logo" name="brandLogo" columnName="brand_logo" iLength="255"></attribute>
+				<attribute type="String" title="品牌名称" name="brandName" columnName="brand_name" iLength="255"></attribute>
+				<attribute type="String" title="品牌地址" name="brandUrl" columnName="brand_url" iLength="255"></attribute>
+				<attribute type="Integer" title="是否停用" name="isDisabled" columnName="is_disabled"></attribute>
+				<attribute type="Long" title="修改时间" name="modifytime" columnName="modify_time"></attribute>
+				<attribute type="Integer" title="序号" name="ordernumber" columnName="ordernumber"></attribute>
+				<attribute type="Long" title="所属公司" name="iCorpId" columnName="iCorpId"></attribute>
+				<attribute type="DateTime" title="时间戳" name="pubuts" columnName="pubts"></attribute>
+				<attribute type="String" title="折叠" name="cfolder" columnName="cfolder" iLength="255"></attribute>
+				<attribute type="String" title="" name="cimgname" columnName="cimgname" iLength="255"></attribute>
+				<attribute type="String" title="" name="coriginalname" columnName="coriginalname" iLength="255"></attribute>
+				<attribute name="deleted" columnName="iDeleted" title="逻辑删除标记" type="Boolean" defaultValue="false" isPartition="true" />
+			</attributes>
+		</class>
+		
+		<class name="ProductClass" title="商品分类档案" tableName="product_presentation_class">
+			<attributes>
+				<attribute type="Long" title="主键" name="id" columnName="id" isKey="true"></attribute>
+				<attribute type="DateTime" title="时间戳" name="pubuts" columnName="pubts"></attribute>
+				<attribute type="String" title="编码" name="code" columnName="code" iLength="255"></attribute>
+				<attribute type="String" title="名称" name="name" columnName="name" iLength="255"></attribute>
+				<attribute type="String" title="路径" name="path" columnName="cFullPath" iLength="255"></attribute>
+				<attribute type="Integer" title="是否删除" name="deleted" columnName="iDeleted" isPartition="true" defaultValue="0"></attribute>
+				<attribute type="Integer" title="层级" name="level" columnName="level"></attribute>
+				<attribute type="Integer" title="顺序" name="sort" columnName="sort_num"></attribute>
+				<attribute type="Integer" title="排序" name="order" columnName="IOrder"></attribute>
+				<attribute type="ProductClass" title="上级分类主键" name="parent" columnName="parent_id"></attribute>
+				<attribute type="SpecPropertyTemplate" title="特殊模板" name="isptemplateid" columnName="tpl_id"></attribute>
+				<attribute type="String" title="erp编码" name="erpCode" columnName="erpCode" iLength="255"></attribute>
+				<attribute type="String" title="页头" name="pagetitle" columnName="pageTitle" iLength="255"></attribute>
+				<attribute type="String" title="分享描述" name="shareDescription" columnName="shareDescription" iLength="255"></attribute>
+				<attribute type="Boolean" title="是否触屏端显示" name="showInTouchpad" columnName="showInTouchpad"></attribute>
+				<attribute type="Boolean" title="是否末级" name="isEnd" columnName="isEnd"></attribute>
+				<!--<attribute type="Short" title="是否保留服务" name="isreservationservices" columnName="isReservationServices"></attribute>-->
+				<!--<attribute type="String" title="分类图片" name="cimgname" columnName="cimgname" iLength="255"></attribute>-->
+			</attributes>			
+		</class>
+
+		<class name="ManageClass" title="物料分类档案" tableName="product_management_class">
+			<attributes>
+				<attribute type="Long" title="主键" name="id" columnName="id" isKey="true"></attribute>
+				<attribute type="DateTime" title="时间戳" name="pubuts" columnName="pubts"></attribute>
+				<attribute type="String" title="编码" name="code" columnName="code" iLength="255"></attribute>
+				<attribute type="String" title="名称" name="name" columnName="name" iLength="255"></attribute>
+				<attribute type="String" title="路径" name="path" columnName="cFullPath" iLength="255"></attribute>
+				<attribute type="Integer" title="是否删除" name="deleted" columnName="iDeleted" isPartition="true" defaultValue="0"></attribute>
+				<attribute type="Integer" title="层级" name="level" columnName="level"></attribute>
+				<attribute type="Integer" title="顺序" name="sort" columnName="sort_num"></attribute>
+				<attribute type="ManageClass" title="上级分类主键" name="parent" columnName="parent_id"></attribute>
+				<attribute type="String" title="erp编码" name="erpCode" columnName="erpCode" iLength="255"></attribute>
+				<attribute type="Boolean" title="是否末级" name="isEnd" columnName="isEnd"></attribute>
+			</attributes>			
+		</class>
+		
+		<!-- 辅助物料分类 -->
+		<class name="SecondaryProductClass" title="辅助物料分类" tableName="productAssistClass">
+		 	<attributes>
+				<attribute type="Long" title="主键" name="id" columnName="id" isKey="true"></attribute>
+			 	<attribute type="DateTime" title="时间戳" name="pubts" columnName="pubts"></attribute>
+			 	<attribute type="Product" title="物料" name="product" columnName="productId"></attribute>
+			 	<attribute type="ProductClass" title="物料分类" name="productClass" columnName="productClassId"></attribute>		 	
+		 	</attributes>
+		</class>
+		<class name="ProductAssistUnitExchange" title="物料辅计量换算对照" tableName="productAssistUnitExchange"><!--不可修改-->
+			<attributes>
+				<attribute type="Product" title="物料ID" name="productId" columnName="productId" iLength="20"></attribute>
+				<attribute type="UnitExchangeType" title="换算方式" name="unitExchangeType" columnName="unitExchangeType" iLength="1"></attribute><!--枚举类型pc_unitExchangeType-->
+				<attribute type="Decimal" title="辅计量数量" name="assistUnitCount" columnName="fAssistUnitCount" iScale="8" iPrecision="19" defaultValue="1"></attribute>
+				<attribute type="pc.unit.Unit" title="辅计量单位" name="assistUnit" columnName="assistUnitId" iLength="20"></attribute>
+				<attribute type="Decimal" title="主计量数量" name="mainUnitCount" columnName="fMainUnitCount" iScale="8" iPrecision="19"></attribute>
+				<attribute type="Integer" title="排序" name="iOrder" columnName="iOrder" iLength="8"></attribute>
+			</attributes>
+		</class>
+		<!-- 物料图片  -->
+		<class name="ProductAlbum" title="物料图片" tableName="productalbum">
+			<attributes>
+				<attribute type="Long" title="主键" name="id" columnName="id" isKey="true"></attribute>
+				<attribute type="DateTime" title="时间戳" name="pubts" columnName="pubts"></attribute>
+				<attribute type="String" title="图片文件路径" name="folder" columnName="cFolder" iLength="255"></attribute>
+				<attribute type="String" title="图片名称" name="imgName" columnName="cImgName" iLength="255"></attribute>
+				<attribute type="Product" title="物料主键" name="product" columnName="productId"></attribute>
+				<attribute type="Integer" title="排序" name="sort" columnName="iSort" ></attribute>
+			</attributes>
+		</class>
+		<!-- 物料线下零售页签  -->
+		<class name="ProductOfflineRetail" title="物料线下零售属性" tableName="productExtendView" isView="true">
+			<attributes>
+				<attribute type="Product" title="主键" name="id" columnName="id" isKey="true"></attribute>
+				<attribute type="DateTime" title="时间戳" name="pubts" columnName="pubts"></attribute>
+				<attribute type="String" title="销售渠道" name="saleChannel" columnName="saleChannel" iLength="10"></attribute>
+                <attribute type="Boolean" title="销售渠道-线上批发" name="saleChannelOfOnlineBatch" columnName="saleChannelOfOnlineBatch" iLength="1"/><!--冗余-->
+                <attribute type="Boolean" title="销售渠道-线上零售" name="saleChannelOfOnlineRetail" columnName="saleChannelOfOnlineRetail" iLength="1"/><!--冗余-->
+                <attribute type="Boolean" title="销售渠道-线下零售" name="enabled" columnName="saleChannelOfOfflineRetail" iLength="1"/><!--冗余-->
+                <attribute type="Boolean" title="销售渠道-微分销" name="saleChannelOfDistribution" columnName="saleChannelOfDistribution" iLength="1"/><!--冗余-->
+                <attribute type="String" title="条形码" name="barCode" columnName="cBarCode" iLength="765"></attribute><!--不复制到sku-->
+				<!--计量单位-->
+				<attribute type="Decimal" title="要货单位换算率" name="orderConversionRate" columnName="requireRate"></attribute>
+				<attribute type="ProductUnit" title="要货单位主键" name="storeOrderUnitKey" columnName="requireUnitId" iLength="255"></attribute>
+				<attribute type="ProductUnit" title="采购单位" name="purchaseUnit" columnName="purchaseUnitId" iLength="20"></attribute>
+                <attribute type="Decimal" title="采购单位换算率" name="purchaseRate" columnName="purchaseRate" iScale="8"  iPrecision="19" ></attribute>
+                <attribute type="ProductUnit" title="库存单位" name="stockUnit" columnName="stockUnitId" iLength="20"></attribute>
+                <attribute type="Decimal" title="库存单位换算率" name="stockRate" columnName="stockRate"  iScale="8" iPrecision="19"></attribute>
+                <attribute type="ProductUnit" title="批发单位" name="batchUnit" columnName="batchUnitId" iLength="20"></attribute>
+                <attribute type="Decimal" title="批发单位换算率" name="batchRate" columnName="batchRate"  iScale="8" iPrecision="19"></attribute>
+               	<attribute type="ProductUnit" title="线上零售单位" name="onlineUnit" columnName="onlineUnitId" iLength="20"></attribute>
+                <attribute type="Decimal" title="线上零售单位换算率" name="onlineRate" columnName="onlineRate" iScale="8" iPrecision="19"></attribute>
+                <attribute type="ProductUnit" title="线下零售单位" name="offlineUnit" columnName="offlineUnitId" iLength="20"></attribute>
+                <attribute type="Decimal" title="线下零售单位换算率" name="offlineRate" columnName="offlineRate" iScale="8" iPrecision="19"></attribute>
+				<attribute type="ProductUnit" title="批发报价单位" name="batchPriceUnit" columnName="batchPriceUnitId" iLength="20"></attribute>
+				<attribute type="Decimal" title="批发报价单位换算率" name="batchPriceRate" columnName="batchPriceRate" iScale="8" iPrecision="19"></attribute>
+				<!--线下零售-->
+				<attribute type="Short" title="是否允许门店自采" name="allowStorePurchase" columnName="allowStorePurchase"></attribute>
+				<attribute type="Short" title="是否允许门店要货" name="isOfflineStoreOrder" columnName="isOfflineStoreOrder"></attribute>
+				<attribute type="Short" title="是否允许开单改价" name="isPriceChangeAllowed" columnName="isPriceChangeAllowed"></attribute>
+				<attribute type="Short" title="是否允许线下销售" name="isSaleInOfflineStore" columnName="isSaleInOfflineStore"></attribute>
+				<attribute type="Boolean" title="零售-允许门店退货" name="isOfflineStoreReturn" columnName="isOfflineStoreReturn" iLength="1" defaultValue="false"></attribute>
+				<attribute type="Integer" title="零售定价维度" name="retailPriceDimension" columnName="retailPriceDimension"></attribute>
+				<attribute type="String" title="助记码" name="mnemonicCode" columnName="mnemonicCode" iLength="255"></attribute>
+				<attribute type="Boolean" title="零售-是否称重" name="isWeight" columnName="isWeight" iLength="1"></attribute>
+          <!--       <attribute type="Boolean" title="零售-是否定制" name="isCustom" columnName="isCustom" iLength="1"></attribute> --> 
+				<!--库存信息-->			
+				<attribute type="Integer" title="保质期" name="expireDateNo" columnName="expireDateNo"></attribute>
+				<attribute type="Integer" title="保质期单位" name="expireDateUnit" columnName="expireDateUnit" iLength="4"></attribute>
+				<attribute type="Short" title="是否批次管理" name="isBatchManage" columnName="isBatchManage"></attribute>
+				<attribute type="Short" title="是否效期管理" name="isExpiryDateManage" columnName="isExpiryDateManage"></attribute>
+				<attribute type="Short" title="是否序列号管理" name="isSerialNoManage" columnName="isSerialNoManage"></attribute>
+				<attribute type="Boolean" title="库存-条码管理" name="isBarcodeManage" columnName="isBarcodeManage" iLength="1"></attribute>
+				<attribute type="Decimal" title="库存-重量" name="weight" columnName="weight" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Decimal" title="库存-体积" name="volume" columnName="volume" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Decimal" title="库存-安全库存" name="safetyStock" columnName="safetyStock" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Decimal" title="库存-最高库存" name="highestStock" columnName="highestStock" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Decimal" title="库存-最低库存" name="lowestStock" columnName="lowestStock" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Decimal" title="库存-再订货点" name="ropStock" columnName="ropStock" iScale="8" iPrecision="19"></attribute>
+				<attribute type="Short" title="库存-扫码计数单位" name="scanCountUnit" columnName="scanCountUnit" iLength="1" defaultValue="0" ></attribute>
+				<!--成本信息-->
+				<attribute type="bd.taxrate.TaxRateVO" title="销项税率（%）" name="outTaxrate" columnName="outTaxrate"  iLength="255"></attribute>
+				<attribute type="bd.taxrate.TaxRateVO" title="进项税率（%）" name="inputTax" columnName="inTaxrate"  iLength="255"></attribute>
+				<attribute type="Decimal" title="参考成本" name="freeTaxCostPrice" columnName="fNoTaxCostPrice"></attribute>
+				<attribute type="Short" title="是否按照批次结算" name="isBatchAccounting" columnName="checkByBatch"></attribute>
+				<attribute type="CheckFreeType" name="checkFreeType" title="规格核算方式" columnName="isCheckFree"></attribute>
+				<!--价格信息-->
+                <attribute type="Decimal" title="批发价" name="batchPrice" columnName="batchPrice" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Decimal" title="建议零售价" name="markPrice" columnName="fMarkPrice" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Decimal" title="最低零售价" name="fLowestMarkPrice" columnName="fLowestMarkPrice" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Decimal" title="线上零售价" name="fSalePrice" columnName="fSalePrice" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Decimal" title="市场价" name="fMarketPrice" columnName="fMarketPrice" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Decimal" title="进货价" name="fPrimeCosts" columnName="fPrimeCosts" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Decimal" title="结算费率" name="fSettleAccountsRate" columnName="fSettleAccountsRate" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Boolean" title="线上商城显示价格" name="isDisplayPrice" columnName="isDisplayPrice" iLength="1"></attribute>
+                <attribute type="String" title="线上不显示价格时，需要显示的提示信息" name="priceAreaMessage" columnName="priceAreaMessage" iLength="765"></attribute>
+                <!-- 店内加工 -->
+				<attribute type="Short" title="加工" name="isProcess" columnName="isProcess"></attribute>
+				<attribute type="ProcessType" title="零售-加工方式" name="processType" columnName="iProcessType" iLength="1" defaultValue="0"></attribute><!--枚举数据库用smallint-->
+				<attribute type="Short" title="材料" name="isMaterial" columnName="isMaterial"></attribute>
+
+				<!--U8C 新增字段 Garyhe begin-->
+
+				<attribute type="ProductApplyRange" title="物料分配范围ID" name="productApplyRangeId" columnName="productApplyRangeId" isRedundant="true"></attribute>
+				<attribute type="String" title="业务属性" name="businessAttribute" columnName="businessAttribute" iLength="20"></attribute>
+
+				<!--计量单位-->
+				<attribute type="ProductUnit" title="生产单位" name="produceUnit" columnName="produceUnitId" iLength="20"></attribute>
+				<attribute type="Decimal" title="生产单位换算率" name="produceRate" columnName="produceRate" iScale="8" iPrecision="19"></attribute>
+				<!--采购信息-->
+				<attribute type="aa.vendor.Vendor" title="供应商" name="productVendor" columnName="productVendor"></attribute>
+				<attribute type="bd.staff.Staff" title="采购员" name="productBuyer" columnName="productBuyer"></attribute>
+				<attribute type="Decimal" title="最高进价" name="maxPrimeCosts" columnName="fMaxPrimeCosts" iScale="8" iPrecision="19" defaultValue="0"></attribute>
+				<attribute type="Decimal" title="请购订货超量上限%" name="requestOrderLimit" columnName="fRequestOrderLimit" iScale="2" iPrecision="19" defaultValue="0"></attribute>
+				<attribute type="Decimal" title="计划订货超量上限%" name="planOrderLimit" columnName="fPlanOrderLimit" iScale="2" iPrecision="19" defaultValue="0"></attribute>
+				<!--库存信息 U8C 新增字段-->
+				<attribute type="Integer" title="库存-近有效期拒收天数" name="daysBeforeValidityReject" columnName="iDaysBeforeValidityReject" iLength="4"></attribute>
+				<attribute type="Integer" title="库存-效期预警天数" name="validityWarningDays" columnName="iValidityWarningDays" iLength="4"></attribute>
+				<attribute type="Decimal" title="库存-重量" name="weight" columnName="weight" iScale="8" iPrecision="19"></attribute>
+				<attribute type="Decimal" title="库存-体积" name="volume" columnName="volume" iScale="8" iPrecision="19"></attribute>
+				<attribute type="bd.staff.Staff" title="库存-库管员" name="warehouseManager" columnName="warehouseManager"></attribute>
+				<attribute type="aa.warehouse.Warehouse" title="库存-发货仓库" name="deliveryWarehouse" columnName="deliveryWarehouse" iLength="20"></attribute>
+				<attribute type="aa.warehouse.Warehouse" title="库存-退货仓库" name="returnWarehouse" columnName="returnWarehouse" iLength="20"></attribute>			
+                <attribute type="Decimal" title="库存-入库超量上限%" name="inStoreExcessLimit" columnName="fInStoreExcessLimit" iScale="2" iPrecision="19"></attribute>
+                <attribute type="Decimal" title="库存-出库超量上限%" name="outStoreExcessLimit" columnName="fOutStoreExcessLimit" iScale="2" iPrecision="19"></attribute>
+                <!-- Garyhe20191024 增加采购计价单位 -->                
+				<attribute type="ProductUnit" title="采购计价单位" name="purchasePriceUnit" columnName="purchasePriceUnitId" iLength="20"></attribute>
+				<attribute type="DeliverQuantityChange" name="deliverQuantityChange" title="交货数量改变时" columnName="deliverQuantityChange"></attribute>
+			</attributes>
+		</class>
+		<class name="ProductCheckFree" title="商家物料规格核算维度" tableName="productCheckFreeView" isView="true">
+            <attributes>
+                <attribute type="Integer" title="物料适用范围类型" name="rangeType" columnName="iRangeType" iLength="1"/><!--1：组织，2：客户-->
+                <attribute type="aa.org.Org" title="组织ID" name="orgId" columnName="orgId" iLength="20"/>
+                <attribute type="aa.merchant.Merchant" title="客户ID" name="customerId" columnName="customerId" iLength="20"/>
+                <attribute type="Boolean" title="是否创建者" name="isCreator" columnName="isCreator" iLength="1"/>
+                <attribute type="Product" title="所属物料" name="productId" columnName="productId" isRedundant="true"></attribute>
+                <attribute type="Specification" title="核算规格ID" name="freeId" columnName="freeId" iLength="20"/>
+            </attributes>
+        </class>
+       	<class name="ProductCheckFreeExtend" title="物料规格核算维度" tableName="productcheckfreeextend">
+            <attributes>
+                <attribute type="Product" title="所属物料" name="productId" columnName="productId" isRedundant="true"></attribute>
+                <attribute type="Specification" title="核算规格ID" name="freeId" columnName="freeId" iLength="20"/>
+            </attributes>
+        </class>
+		<class name="RetailSku" title="零售物料规格" tableName="productsku">
+			<attributes>
+				<attribute type="ProductSKU" title="主键" name="productSku" columnName="id" isKey="true"></attribute>
+				<attribute type="Product" title="所属物料" name="product" columnName="productId"></attribute>
+				<attribute type="String" title="自由项1" name="free1" columnName="free1" iLength="255"></attribute>
+				<attribute type="String" title="自由项2" name="free2" columnName="free2" iLength="255"></attribute>
+				<attribute type="String" title="自由项3" name="free3" columnName="free3" iLength="255"></attribute>
+				<attribute type="String" title="自由项4" name="free4" columnName="free4" iLength="255"></attribute>
+				<attribute type="String" title="自由项5" name="free5" columnName="free5" iLength="255"></attribute>
+				<attribute type="String" title="自由项6" name="free6" columnName="free6" iLength="255"></attribute>
+				<attribute type="String" title="自由项7" name="free7" columnName="free7" iLength="255"></attribute>
+				<attribute type="String" title="自由项8" name="free8" columnName="free8" iLength="255"></attribute>
+				<attribute type="String" title="自由项9" name="free9" columnName="free9" iLength="255"></attribute>
+				<attribute type="String" title="自由项10" name="free10" columnName="free10" iLength="255"></attribute>
+				<attribute type="String" title="规格值" name="propertiesValue" columnName="cSpecs" iLength="700"></attribute>
+				<attribute type="pc.userdef.UserDefineClass" title="动态规格1" name="freeidx1" columnName="freeidx1" iLength="20"/>
+                <attribute type="String" title="动态规格值1" name="freex1" columnName="freex1" iLength="255"/>
+                <attribute type="pc.userdef.UserDefineClass" title="动态规格2" name="freeidx2" columnName="freeidx2" iLength="20"/>
+                <attribute type="String" title="动态规格值2" name="freex2" columnName="freex2" iLength="255"/>
+                <attribute type="pc.userdef.UserDefineClass" title="动态规格3" name="freeidx3" columnName="freeidx3" iLength="20"/>
+                <attribute type="String" title="动态规格值3" name="freex3" columnName="freex3" iLength="255"/>
+                <attribute type="pc.userdef.UserDefineClass" title="动态规格4" name="freeidx4" columnName="freeidx4" iLength="20"/>
+                <attribute type="String" title="动态规格值4" name="freex4" columnName="freex4" iLength="255"/>
+                <attribute type="pc.userdef.UserDefineClass" title="动态规格5" name="freeidx5" columnName="freeidx5" iLength="20"/>
+                <attribute type="String" title="动态规格值5" name="freex5" columnName="freex5" iLength="255"/>
+			</attributes>
+		</class>
+		
+		<class name="ProductUnit" title="物料计量单位" tableName="unit">
+			<attributes>
+				<attribute type="Long" title="主键" name="id" columnName="id" isKey="true"></attribute>
+				<attribute type="DateTime" title="时间戳" name="pubts" columnName="pubts"></attribute>
+				<attribute type="String" title="编码" name="code" columnName="code" iLength="255"></attribute>
+				<attribute type="String" title="名称" name="name" columnName="name" iLength="255" is_mul_language="true"  ></attribute>
+				<attribute type="Integer" title="是否删除" name="deleted" columnName="iDeleted" isPartition="true" defaultValue="0"></attribute>
+				<attribute type="String" title="erp编码" name="erpCode" columnName="erpCode"></attribute>
+				<attribute type="Integer" title="单位精度" name="precision" columnName="precision" />
+			</attributes>
+		</class>
+		
+		<class name="ProductProps" title="零售物料自定义项" tableName="productDefine">
+			<attributes>
+				<attribute type="Product" title="所属物料" name="product" columnName="productId"></attribute>
+				<attribute type="String" title="自定义项1" name="define1" columnName="define1"></attribute>
+				<attribute type="String" title="自定义项2" name="define2" columnName="define2"></attribute>
+				<attribute type="String" title="自定义项3" name="define3" columnName="define3"></attribute>
+				<attribute type="String" title="自定义项4" name="define4" columnName="define4"></attribute>
+				<attribute type="String" title="自定义项5" name="define5" columnName="define5"></attribute>
+				<attribute type="String" title="自定义项6" name="define6" columnName="define6"></attribute>
+				<attribute type="String" title="自定义项7" name="define7" columnName="define7"></attribute>
+				<attribute type="String" title="自定义项8" name="define8" columnName="define8"></attribute>
+				<attribute type="String" title="自定义项9" name="define9" columnName="define9"></attribute>
+				<attribute type="String" title="自定义项10" name="define10" columnName="define10"></attribute>
+				<attribute type="String" title="自定义项11" name="define11" columnName="define11"></attribute>
+				<attribute type="String" title="自定义项12" name="define12" columnName="define12"></attribute>
+				<attribute type="String" title="自定义项13" name="define13" columnName="define13"></attribute>
+				<attribute type="String" title="自定义项14" name="define14" columnName="define14"></attribute>
+				<attribute type="String" title="自定义项15" name="define15" columnName="define15"></attribute>
+				<attribute type="String" title="自定义项16" name="define16" columnName="define16"></attribute>
+				<attribute type="String" title="自定义项17" name="define17" columnName="define17"></attribute>
+				<attribute type="String" title="自定义项18" name="define18" columnName="define18"></attribute>
+				<attribute type="String" title="自定义项19" name="define19" columnName="define19"></attribute>
+				<attribute type="String" title="自定义项20" name="define20" columnName="define20"></attribute>
+				<attribute type="String" title="自定义项21" name="define21" columnName="define21"></attribute>
+				<attribute type="String" title="自定义项22" name="define22" columnName="define22"></attribute>
+				<attribute type="String" title="自定义项23" name="define23" columnName="define23"></attribute>
+				<attribute type="String" title="自定义项24" name="define24" columnName="define24"></attribute>
+				<attribute type="String" title="自定义项25" name="define25" columnName="define25"></attribute>
+				<attribute type="String" title="自定义项26" name="define26" columnName="define26"></attribute>
+				<attribute type="String" title="自定义项27" name="define27" columnName="define27"></attribute>
+				<attribute type="String" title="自定义项28" name="define28" columnName="define28"></attribute>
+				<attribute type="String" title="自定义项29" name="define29" columnName="define29"></attribute>
+				<attribute type="String" title="自定义项30" name="define30" columnName="define30"></attribute>			
+			</attributes>
+		</class>
+
+		<class name="ProductSkuProps" title="零售SKU自定义项" tableName="productskudefine">
+			<attributes>
+				<attribute type="ProductSKU" title="所属SKU" name="sku" columnName="skuId"></attribute>
+				<attribute type="Product" title="所属物料" name="productId" columnName="productId" isRedundant="true"></attribute>
+				<attribute type="String" title="自定义项1" name="define1" columnName="define1"></attribute>
+				<attribute type="String" title="自定义项2" name="define2" columnName="define2"></attribute>
+				<attribute type="String" title="自定义项3" name="define3" columnName="define3"></attribute>
+				<attribute type="String" title="自定义项4" name="define4" columnName="define4"></attribute>
+				<attribute type="String" title="自定义项5" name="define5" columnName="define5"></attribute>
+				<attribute type="String" title="自定义项6" name="define6" columnName="define6"></attribute>
+				<attribute type="String" title="自定义项7" name="define7" columnName="define7"></attribute>
+				<attribute type="String" title="自定义项8" name="define8" columnName="define8"></attribute>
+				<attribute type="String" title="自定义项9" name="define9" columnName="define9"></attribute>
+				<attribute type="String" title="自定义项10" name="define10" columnName="define10"></attribute>
+				<attribute type="String" title="自定义项11" name="define11" columnName="define11"></attribute>
+				<attribute type="String" title="自定义项12" name="define12" columnName="define12"></attribute>
+				<attribute type="String" title="自定义项13" name="define13" columnName="define13"></attribute>
+				<attribute type="String" title="自定义项14" name="define14" columnName="define14"></attribute>
+				<attribute type="String" title="自定义项15" name="define15" columnName="define15"></attribute>
+				<attribute type="String" title="自定义项16" name="define16" columnName="define16"></attribute>
+				<attribute type="String" title="自定义项17" name="define17" columnName="define17"></attribute>
+				<attribute type="String" title="自定义项18" name="define18" columnName="define18"></attribute>
+				<attribute type="String" title="自定义项19" name="define19" columnName="define19"></attribute>
+				<attribute type="String" title="自定义项20" name="define20" columnName="define20"></attribute>
+				<attribute type="String" title="自定义项21" name="define21" columnName="define21"></attribute>
+				<attribute type="String" title="自定义项22" name="define22" columnName="define22"></attribute>
+				<attribute type="String" title="自定义项23" name="define23" columnName="define23"></attribute>
+				<attribute type="String" title="自定义项24" name="define24" columnName="define24"></attribute>
+				<attribute type="String" title="自定义项25" name="define25" columnName="define25"></attribute>
+				<attribute type="String" title="自定义项26" name="define26" columnName="define26"></attribute>
+				<attribute type="String" title="自定义项27" name="define27" columnName="define27"></attribute>
+				<attribute type="String" title="自定义项28" name="define28" columnName="define28"></attribute>
+				<attribute type="String" title="自定义项29" name="define29" columnName="define29"></attribute>
+				<attribute type="String" title="自定义项30" name="define30" columnName="define30"></attribute>
+				<attribute type="String" title="自定义项31" name="define31" columnName="define31"></attribute>
+				<attribute type="String" title="自定义项32" name="define32" columnName="define32"></attribute>
+				<attribute type="String" title="自定义项33" name="define33" columnName="define33"></attribute>
+				<attribute type="String" title="自定义项34" name="define34" columnName="define34"></attribute>
+				<attribute type="String" title="自定义项35" name="define35" columnName="define35"></attribute>
+				<attribute type="String" title="自定义项36" name="define36" columnName="define36"></attribute>
+				<attribute type="String" title="自定义项37" name="define37" columnName="define37"></attribute>
+				<attribute type="String" title="自定义项38" name="define38" columnName="define38"></attribute>
+				<attribute type="String" title="自定义项39" name="define39" columnName="define39"></attribute>
+				<attribute type="String" title="自定义项40" name="define40" columnName="define40"></attribute>
+				<attribute type="String" title="自定义项41" name="define41" columnName="define41"></attribute>
+				<attribute type="String" title="自定义项42" name="define42" columnName="define42"></attribute>
+				<attribute type="String" title="自定义项43" name="define43" columnName="define43"></attribute>
+				<attribute type="String" title="自定义项44" name="define44" columnName="define44"></attribute>
+				<attribute type="String" title="自定义项45" name="define45" columnName="define45"></attribute>
+				<attribute type="String" title="自定义项46" name="define46" columnName="define46"></attribute>
+				<attribute type="String" title="自定义项47" name="define47" columnName="define47"></attribute>
+				<attribute type="String" title="自定义项48" name="define48" columnName="define48"></attribute>
+				<attribute type="String" title="自定义项49" name="define49" columnName="define49"></attribute>
+				<attribute type="String" title="自定义项50" name="define50" columnName="define50"></attribute>
+				<attribute type="String" title="自定义项51" name="define51" columnName="define51"></attribute>
+				<attribute type="String" title="自定义项52" name="define52" columnName="define52"></attribute>
+				<attribute type="String" title="自定义项53" name="define53" columnName="define53"></attribute>
+				<attribute type="String" title="自定义项54" name="define54" columnName="define54"></attribute>
+				<attribute type="String" title="自定义项55" name="define55" columnName="define55"></attribute>
+				<attribute type="String" title="自定义项56" name="define56" columnName="define56"></attribute>
+				<attribute type="String" title="自定义项57" name="define57" columnName="define57"></attribute>
+				<attribute type="String" title="自定义项58" name="define58" columnName="define58"></attribute>
+				<attribute type="String" title="自定义项59" name="define59" columnName="define59"></attribute>
+				<attribute type="String" title="自定义项60" name="define60" columnName="define60"></attribute>
+			</attributes>
+		</class>
+		
+		<class name="Tag" title="物料标签" tableName="tag">
+			<attributes>
+				<attribute type="Long" title="主键" name="id" columnName="id" isKey="true"></attribute>
+			    <attribute type="DateTime" title="时间戳" name="pubts" columnName="pubts"></attribute>	
+			    <attribute type="String" title="标签名称" name="name" columnName="tag_Name"></attribute>	
+				<attribute type="String" title="标签名称" name="code" columnName="tag_type"></attribute>	
+				<attribute type="String" title="标签名称" name="tagName" columnName="tag_Name"></attribute>
+				<attribute type="String" title="标签备注" name="tagAbbr" columnName="tag_abbr"></attribute>
+				<attribute type="String" title="标签类型" name="tagType" columnName="tag_type" iLength="255"></attribute>
+			<!--  	<attribute type="Integer" title="是否删除" name="deleted" columnName="iDeleted" isPartition="true" defaultValue="0"></attribute>  -->
+			</attributes>
+		</class>
+		<class name="TagRel" title="物料标签关联表" tableName="productTag">
+			<attributes>
+				<attribute type="Product" title="物料" name="product" columnName="productId"></attribute>
+				<attribute type="Tag" title="标签ID" name="tagId" columnName="tagId"></attribute>
+			</attributes>
+		</class>
+		
+		<class name="SKUTag" title="SKU标签关联表" tableName="skutagview" isview="true">
+			<attributes>
+				<attribute type="ProductSKU" title="SKUID" name="skuId" columnName="skuId" iLength="20"></attribute>
+                <attribute type="Tag" title="标签ID" name="tagId" columnName="tagId" iLength="20"></attribute>
+			</attributes>
+		</class>
+		
+		<!-- 客户物料范围 -->
+		<class name="ProductApplyRange" title="物料适用范围" tableName="productApplyRange">
+            <attributes>
+                <attribute type="Product" title="物料ID" name="productId" columnName="productId" iLength="20"/>
+                <attribute type="Integer" title="物料适用范围类型" name="rangeType" columnName="iRangeType" iLength="1"/><!--1：组织，2：客户-->
+                <attribute type="aa.org.Org" title="组织ID" name="orgId" columnName="orgId" iLength="20"/>
+                <attribute type="aa.merchant.Merchant" title="客户ID" name="customerId" columnName="customerId" iLength="20"/>
+				<attribute type="Long" title="商家ID" name="shopId" columnName="shopId" iLength="20"/>
+				<attribute type="Boolean" title="是否创建者" name="isCreator" columnName="isCreator" iLength="1"/>
+				<attribute type="Boolean" title="是否被分配者使用" name="isApplied" columnName="isApplied" iLength="1"/>  10:44
+			</attributes>
+        </class>
+		
+		<!-- 冗余视图：商家物料 -->
+		<class name="ShopProduct" title="商家物料" tableName="shopProductView" isView="true">
+            <attributes>
+                <attribute type="Product" title="物料ID" name="product" columnName="productId" iLength="20"/>
+                <attribute type="Integer" title="物料适用范围类型" name="rangeType" columnName="iRangeType" iLength="1"/><!--1：组织，2：客户-->
+                <attribute type="aa.org.Org" title="组织ID" name="orgId" columnName="orgId" iLength="20"/>
+                <attribute type="aa.merchant.Merchant" title="客户ID" name="customerId" columnName="customerId" iLength="20"/>
+                <attribute type="Boolean" title="是否创建者" name="isCreator" columnName="isCreator" iLength="1"/>
+            
+            	<attribute type="String" title="销售渠道" name="saleChannel" columnName="saleChannel" iLength="10"></attribute>
+                <attribute type="Boolean" title="销售渠道-线上批发" name="saleChannelOfOnlineBatch" columnName="saleChannelOfOnlineBatch" iLength="1"/><!--冗余-->
+                <attribute type="Boolean" title="销售渠道-线上零售" name="saleChannelOfOnlineRetail" columnName="saleChannelOfOnlineRetail" iLength="1"/><!--冗余-->
+                <attribute type="Boolean" title="销售渠道-线下零售" name="enabled" columnName="saleChannelOfOfflineRetail" iLength="1"/><!--冗余-->
+                <attribute type="Boolean" title="销售渠道-微分销" name="saleChannelOfDistribution" columnName="saleChannelOfDistribution" iLength="1"/><!--冗余-->
+                <attribute type="String" title="条形码" name="barCode" columnName="cBarCode" iLength="765"></attribute><!--不复制到sku-->
+            
+                <!--计量单位-->
+                <attribute type="ProductUnit" title="采购单位" name="purchaseUnit" columnName="purchaseUnitId" iLength="20"></attribute>
+                <attribute type="Decimal" title="采购单位换算率" name="purchaseRate" columnName="purchaseRate" iScale="8"  iPrecision="19" ></attribute>
+                <attribute type="ProductUnit" title="库存单位" name="stockUnit" columnName="stockUnitId" iLength="20"></attribute>
+                <attribute type="Decimal" title="库存单位换算率" name="stockRate" columnName="stockRate"  iScale="8" iPrecision="19"></attribute>
+                <attribute type="ProductUnit" title="批发单位" name="batchUnit" columnName="batchUnitId" iLength="20"></attribute>
+                <attribute type="Decimal" title="批发单位换算率" name="batchRate" columnName="batchRate"  iScale="8" iPrecision="19"></attribute>
+                <attribute type="ProductUnit" title="线上零售单位" name="onlineUnit" columnName="onlineUnitId" iLength="20"></attribute>
+                <attribute type="Decimal" title="线上零售单位换算率" name="onlineRate" columnName="onlineRate" iScale="8" iPrecision="19"></attribute>
+                <attribute type="ProductUnit" title="线下零售单位" name="offlineUnit" columnName="offlineUnitId" iLength="20"></attribute>
+                <attribute type="Decimal" title="线下零售单位换算率" name="offlineRate" columnName="offlineRate" iScale="8" iPrecision="19"></attribute>
+                <attribute type="ProductUnit" title="要货单位" name="requireUnit" columnName="requireUnitId" iLength="20"></attribute>
+                <attribute type="Decimal" title="要货单位换算率" name="requireRate" columnName="requireRate" iScale="8" iPrecision="19"></attribute>
+                <attribute type="ProductUnit" title="批发报价单位" name="batchPriceUnit" columnName="batchPriceUnitId" iLength="20"></attribute> 
+                <attribute type="Decimal" title="批发报价单位换算率" name="batchPriceRate" columnName="batchPriceRate" iScale="8" iPrecision="19"></attribute>
+                <!--价格信息-->
+                <attribute type="Decimal" title="批发价" name="batchPrice" columnName="batchPrice" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Decimal" title="建议零售价" name="markPrice" columnName="fMarkPrice" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Decimal" title="最低零售价" name="fLowestMarkPrice" columnName="fLowestMarkPrice" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Decimal" title="线上零售价" name="fSalePrice" columnName="fSalePrice" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Decimal" title="市场价" name="fMarketPrice" columnName="fMarketPrice" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Decimal" title="进货价" name="fPrimeCosts" columnName="fPrimeCosts" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Decimal" title="结算费率" name="fSettleAccountsRate" columnName="fSettleAccountsRate" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Boolean" title="线上商城显示价格" name="isDisplayPrice" columnName="isDisplayPrice" iLength="1"></attribute>
+                <attribute type="String" title="线上不显示价格时，需要显示的提示信息" name="priceAreaMessage" columnName="priceAreaMessage" iLength="765"></attribute>
+                <!--库存信息-->
+                <attribute type="Boolean" title="库存-是否批次管理" name="isBatchManage" columnName="isBatchManage" iLength="1"></attribute>
+                <attribute type="Boolean" title="库存-是否有效期管理" name="isExpiryDateManage" columnName="isExpiryDateManage" iLength="1"></attribute>
+                <attribute type="Integer" title="库存-保质期" name="expireDateNo" columnName="expireDateNo" iLength="10"></attribute>
+                <attribute type="Short" title="库存-保质期单位" name="expireDateUnit" columnName="expireDateUnit" iLength="1"></attribute><!--下拉选择，包括天、月、年三种 枚举类型pc_expireDateUnit-->
+                <attribute type="Boolean" title="库存-是否序列号管理" name="isSerialNoManage" columnName="isSerialNoManage" iLength="1"></attribute>
+				<attribute type="Boolean" title="库存-条码管理" name="isBarcodeManage" columnName="isBarcodeManage" iLength="1"></attribute>
+				<attribute type="Decimal" title="库存-重量" name="weight" columnName="weight" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Decimal" title="库存-体积" name="volume" columnName="volume" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Decimal" title="库存-安全库存" name="safetyStock" columnName="safetyStock" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Decimal" title="库存-最高库存" name="highestStock" columnName="highestStock" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Decimal" title="库存-最低库存" name="lowestStock" columnName="lowestStock" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Decimal" title="库存-再订货点" name="ropStock" columnName="ropStock" iScale="8" iPrecision="19"></attribute>			
+                <attribute type="Decimal" title="库存-入库超量上限%" name="inStoreExcessLimit" columnName="fInStoreExcessLimit" iScale="2" iPrecision="19"></attribute>
+                <attribute type="Decimal" title="库存-出库超量上限%" name="outStoreExcessLimit" columnName="fOutStoreExcessLimit" iScale="2" iPrecision="19"></attribute>
+				<attribute type="Short" title="库存-扫码计数单位" name="scanCountUnit" columnName="scanCountUnit" iLength="1" defaultValue="0" ></attribute>
+				<!--批发信息-->
+                <attribute type="Boolean" title="批发-可售状态" name="canSale" columnName="canSale" iLength="1" defaultValue="1"></attribute>
+                <attribute type="Decimal" title="批发-起订量" name="iMinOrderQuantity" columnName="iMinOrderQuantity" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Integer" title="批发-交货周期（天）" name="deliveryDays" columnName="deliveryDays" iLength="10"></attribute>
+                <!--线上商城-->
+                <attribute type="Boolean" title="商城-启用周期购" name="iEnableCyclePurchase" columnName="iEnableCyclePurchase" iLength="1" defaultValue="0"></attribute>
+                <attribute type="Boolean" title="商城-启用预定业务" name="enableDeposit" columnName="enableDeposit" iLength="1"></attribute>
+                <attribute type="Integer" title="商城-定金设置类型" name="depositDealPayType" columnName="depositDealPayType"></attribute>
+                <attribute type="Decimal" title="商城-预付定金金额" name="deposits" columnName="deposits" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Decimal" title="商城-预付定金百分比" name="depositPercentage" columnName="depositPercentage" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Boolean" title="商城-订单改价时可修改定金" name="enablemodifyDeposit" columnName="enablemodifyDeposit" iLength="1"></attribute>
+                <attribute type="Decimal" title="商城-最低定金金额" name="minimumDeposits" columnName="minimumDeposits" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Integer" title="商城-支付尾款方式" name="depositPayType" columnName="depositPayType" iLength="1"></attribute>
+                <attribute type="Decimal" title="商城-线上库存量" name="lInventoryCount" columnName="lInventoryCount" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Integer" title="商城-初始销量" name="iBaseSaleCount" columnName="iBaseSaleCount" iLength="20"></attribute>
+                <!--线下零售-->
+                <attribute type="Boolean" title="零售-允许门店自采" name="allowStorePurchase" columnName="allowStorePurchase" iLength="1"></attribute>
+                <attribute type="Boolean" title="零售-允许开单改价" name="isPriceChangeAllowed" columnName="isPriceChangeAllowed" iLength="1"></attribute>
+                <attribute type="Boolean" title="零售-允许门店销售" name="isSaleInOfflineStore" columnName="isSaleInOfflineStore" iLength="1"></attribute>
+                <attribute type="Boolean" title="零售-允许门店要货" name="isOfflineStoreOrder" columnName="isOfflineStoreOrder" iLength="1"></attribute>
+                <attribute type="Boolean" title="零售-允许门店退货" name="isOfflineStoreReturn" columnName="isOfflineStoreReturn" iLength="1" defaultValue="false"></attribute>
+                <attribute type="Boolean" title="零售-是否称重" name="isWeight" columnName="isWeight" iLength="1"></attribute>
+           <!--       <attribute type="Boolean" title="零售-是否定制" name="isCustom" columnName="isCustom" iLength="1"></attribute>-->
+                <attribute type="Short" title="零售-零售取价维度" name="retailPriceDimension" columnName="retailPriceDimension" iLength="1"></attribute><!--1物料2物料SKU枚举pc_retailPriceDimension-->
+                <!--成本信息-->
+                <attribute type="Decimal" title="成本-参考成本" name="fNoTaxCostPrice" columnName="fNoTaxCostPrice" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Boolean" title="成本-按批次核算" name="checkByBatch" columnName="checkByBatch" iLength="1"></attribute>
+				<attribute type="CheckFreeType" name="checkFreeType" title="规格核算方式" columnName="isCheckFree"></attribute>
+				<!--冗余字段-->
+                <attribute type="Boolean" title="商城上下架状态" name="iStatus" columnName="iStatus" iLength="1" defaultValue="0"></attribute>
+                <attribute type="Boolean" title="U订货上下架状态" name="iUOrderStatus" columnName="iUOrderStatus" iLength="1" defaultValue="0"></attribute>
+                <attribute type="Integer" title="商城上架数量" name="mallupcount" columnName="mallupcount" iLength="10"></attribute>
+                <attribute type="Integer" title="商城下架数量" name="malldowncount" columnName="malldowncount" iLength="10"></attribute>
+                <attribute type="Integer" title="U订货上架数量" name="uorderupcount" columnName="uorderupcount" iLength="10"></attribute>
+                <attribute type="Integer" title="U订货下架数量" name="uorderdowncount" columnName="uorderdowncount" iLength="10"></attribute>
+                <!-- 店内加工 -->
+				<attribute type="Short" title="加工" name="isProcess" columnName="isProcess"></attribute>
+				<attribute type="ProcessType" title="零售-加工方式" name="processType" columnName="iProcessType" iLength="1" defaultValue="0"></attribute><!--枚举数据库用smallint-->
+				<attribute type="Short" title="材料" name="isMaterial" columnName="isMaterial"></attribute>
+				<attribute type="bd.taxrate.TaxRateVO" title="销项税率（%）" name="outTaxrate" columnName="outTaxrate"  iLength="255"></attribute>
+				<attribute type="bd.taxrate.TaxRateVO" title="进项税率（%）" name="inputTax" columnName="inTaxrate"  iLength="255"></attribute>
+				<!-- Garyhe20191024 增加采购计价单位 -->				
+				<attribute type="ProductUnit" title="采购计价单位" name="purchasePriceUnit" columnName="purchasePriceUnitId" iLength="20"></attribute>
+				<attribute type="DeliverQuantityChange" name="deliverQuantityChange" title="交货数量改变时" columnName="deliverQuantityChange"></attribute>
+			</attributes>
+        </class>
+        
+        <!-- shopProductsku视图，兼容旧代码 -->
+        <class name="ShopProductSKU" title="商家物料sku" tableName="shopProductSkuView" isView="true">
+            <attributes>
+                <attribute type="Integer" title="物料适用范围类型" name="rangeType" columnName="iRangeType" iLength="1"/><!--1：组织，2：客户-->
+                <attribute type="aa.org.Org" title="组织ID" name="orgId" columnName="orgId" iLength="20"/>
+                <attribute type="aa.merchant.Merchant" title="客户ID" name="customerId" columnName="customerId" iLength="20"/>
+                <attribute type="Boolean" title="是否创建者" name="isCreator" columnName="isCreator" iLength="1"/>
+            	<attribute type="ShopProduct" title="商家物料" name="shopProductId" columnName="iShopProductId"></attribute>
+            	
+                <attribute type="Product" title="所属物料" name="product" columnName="productId" isRedundant="true"></attribute><!--冗余-->
+                <attribute type="ProductSKU" title="SKUID" name="skuId" columnName="skuId"></attribute>
+                <attribute type="Boolean" title="商城上下架状态" name="status" columnName="iStatus" iLength="1"></attribute>
+                <attribute type="Boolean" title="U订货上下架状态" name="ustatus" columnName="iUStatus" iLength="1"></attribute>
+                <attribute type="Decimal" title="批发价" name="batchPrice" columnName="batchPrice" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Decimal" title="建议零售价" name="markPrice" columnName="fMarkPrice" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Decimal" title="线上零售价" name="salePrice" columnName="fSalePrice" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Decimal" title="市场价" name="fMarketPrice" columnName="fMarketPrice" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Decimal" title="进货价" name="fPrimeCosts" columnName="fPrimeCosts" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Decimal" title="结算费率" name="fSettleAccountsRate" columnName="fSettleAccountsRate" iScale="8" iPrecision="19"></attribute>
+                <attribute type="String" title="SKU条形码" name="barCode" columnName="cBarCode" iLength="255"></attribute>
+                <attribute type="Decimal" title="库存" name="inventoryCount" columnName="lInventoryCount" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Decimal" title="重量" name="weight" columnName="weight" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Integer" title="积分数量" name="salePoints" columnName="salePoints"></attribute>
+                <attribute type="Integer" title="已售标记" name="saled" columnName="iSaled"></attribute>
+                <attribute type="ProductUnit" title="批发单位" name="batchUnit" columnName="batchUnitId" iLength="20"></attribute>
+                <attribute type="Decimal" title="批发单位换算率" name="batchRate" columnName="batchRate" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Decimal" title="批发-起订量" name="iMinOrderQuantity" columnName="iMinOrderQuantity" iScale="8" iPrecision="19"></attribute>
+                <attribute type="Integer" title="批发-交货周期（天）" name="batchDeliveryDays" columnName="batchDeliveryDays" iLength="10"></attribute>
+            	<attribute type="Decimal" name="noTaxCostPrice" title="参考成本" columnName="fNoTaxCostPrice" iScale="8" iPrecision="19"></attribute>
+				<attribute type="String" title="sku简称" name="skuAbbreviation" columnName="shortName" iLength="255"></attribute>
+			</attributes>
+        </class>
+
+		<class name="ProductBarCode" title="物料条码" tableName="productBarCode"><!--不可修改-->
+			<attributes>
+				<attribute type="Product" title="物料ID" name="productId" columnName="productId" iLength="20"></attribute>
+				<attribute type="String" title="条码" name="barCode" columnName="cBarCode" iLength="50"></attribute>
+			</attributes>
+		</class>
+
+		<associations>
+			<association type="composition" typeB="Product" roleB="product" typeA="ProductSKU" roleA="productskus" roleAMulti="1..n"></association>
+			<association type="composition" typeB="ProductSKU" roleB="productSku" typeA="RetailSku" roleA="retailskus" roleAMulti="1"></association>
+			<association type="composition" typeB="Product" roleB="product" typeA="ProductAlbum" roleA="productAlbums" roleAMulti="0..n"></association>
+			<!-- 物料自定义项不支持分配，物料和自定义项是1.1关系 -->
+			<association type="composition" typeB="Product" roleB="product" typeA="ProductProps" roleA="productProps" roleAMulti="1"></association>
+			<association type="composition" typeB="Product" roleB="product" typeA="SecondaryProductClass" roleA="secondaryProductClass" roleAMulti="0..n"></association>
+		 	<association type="composition" typeB="Product" roleB="product" typeA="TagRel" roleA="productTags" roleAMulti="0..n"></association>
+			<association type="composition" typeB="ProductSKU" roleB="skuId" typeA="SKUTag" roleA="skuTags" roleAMulti="0..n"></association>
+			<!-- 增加视图shopproduct，兼容旧代码 -->
+			<association type="composition" typeB="Product" roleB="productId" typeA="ProductApplyRange" roleA="productApplyRanges" roleAMulti="1..n"></association>
+			<association type="composition" typeB="Product" roleB="product" typeA="ShopProduct" roleA="shopProduct" roleAMulti="0..n"></association>
+			<association type="composition" typeB="Product" roleB="id" typeA="ProductOfflineRetail" roleA="productOfflineRetail" roleAMulti="1"></association>
+			<association type="composition" typeB="ShopProduct" roleB="shopProduct" typeA="ShopProductSKU" roleA="shopProductSkus" roleAMulti="0..n"></association>
+			<association type="composition" typeB="ProductSKU" roleB="sku" typeA="ProductSkuProps" roleA="productSkuProps" roleAMulti="1"></association>
+			<association type="composition" typeB="ProductSKU" roleB="skuId" typeA="ShopProductSKU" roleA="shopProductSku" roleAMulti="0..n"></association>
+			<association type="composition" typeB="Product" roleB="productId" typeA="ProductCheckFree" roleA="productCheckFrees" roleAMulti="0..n"></association>
+			<association type="composition" typeB="Product" roleB="productId" typeA="ProductCheckFreeExtend" roleA="productCheckFreeExtends" roleAMulti="0..n"></association>
+			<association type="composition" typeB="Product" roleB="productId" typeA="ProductBarCode" roleA="productBarCodes" roleAMulti="0..n"></association>
+			<association type="composition" typeB="Product" roleB="productId" typeA="ProductAssistUnitExchange" roleA="productAssistUnitExchanges" roleAMulti="0..n"></association>
+		</associations>
+		
+		<realizations>
+			<realization client="Product" supplier="base.itf.ITenant"></realization>
+			<realization client="ProductUnit" supplier="base.itf.ITenant"></realization>
+			<realization client="ProductAlbum" supplier="base.itf.ITenant"></realization>
+			<realization client="SpecPropertyTemplate" supplier="base.itf.ITenant"></realization>
+			<realization client="Specification" supplier="base.itf.ITenant"></realization>
+			<realization client="ProductSKU" supplier="base.itf.ITenant"></realization>
+			<realization client="ProductSKU" supplier="base.itf.IStopping"></realization>
+			<realization client="Specitem" supplier="base.itf.ITenant"></realization>
+			<realization client="ProductBrand" supplier="base.itf.ITenant"></realization>
+			<realization client="ProductClass" supplier="base.itf.ITree"/>
+			<realization client="ProductClass" supplier="base.itf.ITenant"></realization>
+			<realization client="ManageClass" supplier="base.itf.ITree"/>
+			<realization client="ManageClass" supplier="base.itf.ITenant"></realization>
+			<realization client="ProductProps" supplier="base.itf.ITenant"></realization>
+			<realization client="RetailSku" supplier="base.itf.ITenant"></realization>
+			<realization client="ProductSkuProps" supplier="base.itf.ITenant"></realization>
+			<realization client="SecondaryProductClass" supplier="base.itf.ITenant"></realization>
+			<realization client="Tag" supplier="base.itf.ITenant"></realization>
+			<realization client="TagRel" supplier="base.itf.ITenant"></realization>
+			<realization client="SKUTag" supplier="base.itf.ITenant"></realization>
+			<realization client="ProductCheckFree" supplier="base.itf.ITenant"></realization>
+			<realization client="ProductCheckFreeExtend" supplier="base.itf.ITenant"></realization>
+			<realization client="ProductApplyRange" supplier="base.itf.ITenant"></realization>
+            <realization client="ShopProduct" supplier="base.itf.ITenant"></realization>
+            <realization client="ShopProductSKU" supplier="base.itf.ITenant"></realization>
+            <realization client="ShopProductSKU" supplier="base.itf.IStopping"></realization>
+            <realization client="ProductOfflineRetail" supplier="base.itf.IStopping"></realization>
+            <realization client="ShopProduct" supplier="base.itf.IStopping"></realization>
+			<realization client="ProductBarCode" supplier="base.itf.ITenant"></realization>
+			<realization client="ProductSpecItem" supplier="base.itf.ITenant"></realization>
+			<realization client="ProductAssistUnitExchange" supplier="base.itf.ITenant"></realization>
+		</realizations>
+		
+		<generalizations>
+			<generalization child="Product" parent="base.entity.BizObject"/>
+			<generalization child="ProductSKU" parent="base.entity.BizObject"/>
+			<generalization child="SpecPropertyTemplate" parent="base.entity.BizObject"/>
+			<generalization child="Specification" parent="base.entity.BizObject"/>
+			<generalization child="Specitem" parent="base.entity.BizObject"/>
+			<generalization child="SptemplateSpec" parent="base.entity.BizObject"/>
+			<generalization child="ProductClass" parent="base.entity.BizObject"/>
+			<generalization child="ManageClass" parent="base.entity.BizObject"/>
+			<generalization child="SecondaryProductClass" parent="base.entity.BizObject"/>
+			<generalization child="ProductAlbum" parent="base.entity.BizObject"/>
+			<generalization child="ProductUnit" parent="base.entity.BizObject"/>
+			<generalization child="SKUTag" parent="base.entity.BizObject"/>
+			<generalization child="Tag" parent="base.entity.BizObject"/>
+			<generalization child="TagRel" parent="base.entity.BizObject"/>
+			<generalization child="ProductSkuProps" parent="base.entity.BizObject"></generalization>
+			<generalization child="ProductApplyRange" parent="base.entity.BizObject"/>
+			<generalization child="ProductCheckFree" parent="base.entity.BizObject"/>
+			<generalization child="ProductCheckFreeExtend" parent="base.entity.BizObject"/>
+			<generalization child="ProductProps" parent="base.entity.BizObject"/>
+			<generalization child="ProductAssistUnitExchange" parent="base.entity.BizObject"/>
+			<!-- 
+			<generalization child="ProductSKUDetail" parent="base.entity.BizObject"/>
+			<generalization child="ProductApplyRangeDetail" parent="base.entity.BizObject"/>
+			 -->
+			<generalization child="ShopProduct" parent="base.entity.BizObject"/>
+			<generalization child="ShopProductSKU" parent="base.entity.BizObject"/>
+			<generalization child="ProductBarCode" parent="base.entity.BizObject"/>
+			<generalization child="ProductSpecItem" parent="base.entity.BizObject"/>
+		</generalizations>
+	</component>
+</components>

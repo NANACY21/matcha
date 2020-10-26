@@ -1,0 +1,23 @@
+url：
+bill/batchdelete
+
+他调用我 他带着一个token
+调用时需要给的参数：
+{"billnum":"aa_userlist","data":"[{\"yxyUserId\":4b24b0ede63a421b8537333091deb644}]"}
+
+接口的返回结果：
+{
+  "code": 200,
+  "message": "（模块名称）（动作）成功"
+}
+{
+  "code": 999,
+  "message": "（模块名称）（动作）操作失败，原因xxx"
+}
+
+调我接口 接口返回结果都告诉订货
+订货调我 一定是订货开通了
+
+code=200 且 成功一条 -> 成功
+code!=200 或 成功0条 -> 失败
+code=200 && 成功0条 才能取到msg

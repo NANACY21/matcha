@@ -1,0 +1,28 @@
+三大档案 物料 客户 供应商（已移除）
+
+domain：
+基础服务 productcenter
+零售 retail
+
+ui元数据请求
+通用查询 不用写sql
+动态dao层
+
+
+user表 registersource字段
+0 upc
+1 mall
+2 会员
+3 订货
+4 零售
+
+调用：dubbo(rpc) request metahelper QueryConditionGroup
+3U 优先dubbo调用
+[领域模型]就是对象
+
+领域云 SYSCODE 系统编码
+U订货 UOrder
+U会员 UMember 罗敏
+零售 URetail
+商城 UMall 陈志峰
+基础服务 upc

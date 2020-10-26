@@ -1,0 +1,18 @@
+url：
+bill/stopStatusChange
+
+调用基础服务时需要给的参数：
+{"billnum":"aa_userlist","yxyUserId":"4b24b0ede63a421b8537333091deb644","stopstatus":"true"}
+（停用时 stopstatus给的值为 true 启用时 给false）
+
+20200904
+启用停用 查不到用户时返回值 不报错!!!
+接口的返回结果：
+{
+  "code": 200,
+  "message": "（模块名称）（动作）成功"
+}
+{
+  "code": 999,
+  "message": "（模块名称）（动作）操作失败，原因xxx"
+}
