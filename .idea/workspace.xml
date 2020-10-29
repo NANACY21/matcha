@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9cae0b1d-fa9e-4477-9c04-b936e6df5af0" name="Default Changelist" comment="" />
+    <list default="true" id="9cae0b1d-fa9e-4477-9c04-b936e6df5af0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/CreateSQL.sql" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/货位/CreateSQL.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/货位物料对照列表.xlsm" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/货位/货位物料对照列表.xlsm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/3U功能.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/itg 预发 区别.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/基础服务业务.txt" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,7 +28,18 @@
     <expand />
     <select />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="D:\allproject\personal\matcha\.idea" />
+      </set>
+    </option>
+  </component>
   <component name="ProjectId" id="1jPTwnWCaK1XF02777ugxbEPzOQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -45,9 +63,25 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="717" y="386" key="com.intellij.ide.util.TipDialog" timestamp="1603705221486">
+    <state x="677" y="151" key="CommitChangelistDialog2" timestamp="1603953908527">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="717" y="386" key="com.intellij.ide.util.TipDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1603705221486" />
+    <state x="677" y="151" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1603953908527" />
+    <state x="198" y="100" key="DiffContextDialog" timestamp="1603789856909">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="198" y="100" key="DiffContextDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1603789856909" />
+    <state x="717" y="386" key="com.intellij.ide.util.TipDialog" timestamp="1603951360681">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="717" y="386" key="com.intellij.ide.util.TipDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1603951360681" />
+    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup" timestamp="1603953815969">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1603953815969" />
+    <state x="747" y="475" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1603951403220">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="747" y="475" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1603951403220" />
   </component>
 </project>
