@@ -22,3 +22,23 @@ WHERE bill.cBillNo='pc_producttpl' AND item.cName='brand_name';
 select *
 from billitem_base item inner join bill_base bill on bill.id = item.iBillId
 WHERE bill.cBillNo='pc_producttpl' AND item.cName='attachmentGroup_name';
+
+
+
+select mobilepreno
+from user where yxyuserid='lichi2020110601';
+
+select *
+from tenant where email='2020110666@qq.com';
+
+desc productextendview;
+desc shopproductview;
+
+
+alter table aa_goodsposition
+    add unique index (code, tenant_id);
+
+
+
+
+

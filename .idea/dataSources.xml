@@ -66,13 +66,15 @@ db.uimeta.password=lsUPC@180806</remarks>
     <data-source source="LOCAL" name="ys预发环境" uuid="2cd0ed7e-c5a3-47c7-b7c0-32402be61cd1">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
+      <remarks>ysdemo环境</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://rm-2zeff8189910d519x.mysql.rds.aliyuncs.com:3306/ugoods?useUnicode=true&amp;characterEncoding=UTF-8&amp;allowMultiQueries=true</jdbc-url>
     </data-source>
     <data-source source="LOCAL" name="ys生产环境" uuid="0d6c216e-e31b-4295-8408-a024b2de964c">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
-      <remarks>只读账号</remarks>
+      <remarks>ys正式环境(推公有云)
+只读账号</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://172.20.47.57:3354</jdbc-url>
     </data-source>

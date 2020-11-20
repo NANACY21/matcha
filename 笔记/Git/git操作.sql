@@ -50,3 +50,11 @@
 
 # [注意]
 # 不同分支注意切换 maven profiles 事先在本地编译一下代码!!!
+# 预发临时分支的视图脚本存放目录
+# UStock\scripts\mysql\z_billtemplate\DML
+
+
+[注意]
+在u8c目录 切到了master分支 操作：pull maven reimport
+代码 不影响
+maven影响 都切成对应的之后 reimport一下就好了

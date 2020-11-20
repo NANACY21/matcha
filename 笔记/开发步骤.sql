@@ -39,3 +39,31 @@
 # 同步、异步rule
 # 同义词转换！！！
 # 谁提的问题 谁测
+
+
+# [项目详细解说]
+友零售-商品中心，开发一个功能，分为4块：
+1.upc-meta-resources模块，该模块里是xml，元数据，typeA：子表/成员变量；
+3.upc-service模块
+upc-meta-tools模块：
+upc-meta-tools\src\main\java\com\yonyoucloud\upc\tpl\test中的Java类有用；
+upc-models模块，该模块里是Java实体类；
+upc-server模块：
+upc-server\src\main\java\com\yonyoucloud\upc\controller，控制层；
+java.xml：定义好了类型；
+
+
+edit configurations->app.version=upc-develop
+
+
+读取数据库以加载页面，组件信息存数据库；
+通常用户使用软件中可能insert，而友零售在使用中可能新增了一张表；
+通过读取数据库来执行很多东西；
+
+
+模型驱动开发（MDD）：https://wenku.baidu.com/view/8221dc4753d380eb6294dd88d0d233d4b14e3ff1.html
+元数据：https://blog.csdn.net/chenkefo/article/details/81901776
+采用maven私服
+
+
+本地启动服务后，先登录ys test环境

@@ -1,6 +1,3 @@
-# [有没有菜单] [菜单显不显示]
-# [领域云]执行sql以加菜单
-# [ys][加菜单找刘景新 不手动执行sql 蔡昊确认需求]
 insert into pb_menu_base (`id`, `menu_code`, `subid`, `ilevel`, `pmenu_code`, `auth_id`, `ordernum`, `depends`, `flag`, `imagename`, `viewtype`, `menu_url`, `metatype`, `metakey`, `pubts`, `ideleted`, `bendgrade`, `bEA`, `icon`, `auth_level`, `isshoprelated`, `tenant_id`, `propertytype`, `terminalType`, `isSystem`)
 select distinct 0, 'aa_goodsposition', 'AA', 1, 'aa_sendtrans', 'aa_goodsposition', 61, NULL, 1, NULL, 'meta', NULL, 'voucherList', 'aa_goodsposition', NOW(), 0, 1, 1, 'aa_goodsposition', 5, 0, tenant.id, NULL, '1', 1 from pb_menu_base menu
 inner join tenant on menu.tenant_id = tenant.id
@@ -30,7 +27,7 @@ where not exists (select * from pb_menu_lang where menu_code = 'aa_goodsposition
 # from pb_menu_lang
 # where menu_code = 'aa_goodsposition';
 
-# [ys 领域云 都提供脚本]
+
 -- 新增附件分组菜单权限
 INSERT INTO `auth`(`code`, `name`, `parent_id`, `level`, `path`, `sort_num`, `isEnd`, `pubts`, `auth_level`, `note`,
                    `alias_code`, `subId`)
@@ -55,9 +52,6 @@ INSERT INTO `auth`(`code`, `name`, `parent_id`, `level`, `path`, `sort_num`, `is
 select 'aa_goodspositionedit', '修改', 'aa_goodsposition', 3, NULL, 4, 0, NOW(), 2, NULL, NULL, 'upc' from auth where
 not exists(select 1 from auth where code='aa_goodspositionedit' and name='修改') limit 1;
 
-select *
-from auth
-where code like '%aa_goodsposition%';
 
 # excel 后2张表涉及 authid
 delete
@@ -73,7 +67,6 @@ where tenant_id = 0 and menu_code like '%house%';
 
 
 select * from auth where parent_id = 'aa_businessarchives';
-# 参考[物流公司][组织档案]
 
 
 # 参照类型 - pub_ref表code字段
@@ -318,50 +311,14 @@ INSERT INTO aa_enum (enumtype, nametype, enumcode, localid, enumname, subid, ide
 VALUES ('aa_goodsproductscomparison_look', 'text', '2', 'zh-cn', '物料', 'aa', 0, 0, null,
         'aa_goodsproductscomparison_look');
 
-
-
-
-select *
-from aa_goodsproductscomparison
-select *
-from billruleregister where ruleId like '%save%' and billnum='common' and tenant_id=0;
-select *
-from aa_v_positionlook;
-
-select *
-from aa_v_productlook;
-
-select * from aa_goodsposition;
-
 select *
 from pub_ref where code='pc_nomalproductref';
 
-
-
-
-# [需求]
-
 select pc.name
-from product p inner join product_management_class pc on p.manageClass=pc.id where p.code='1' and p.name='11111'
-;
-
-
-
-
-select *
-from aa_warehouse where isGoodsPosition=1;
-
-
-
-
-
-
-
-select *
-from aa_goodsposition;
-
-#xml有问题
-# 生成的脚本没有insert excel宏语句有问题 换excel
+from product p
+         inner join product_management_class pc on p.manageClass = pc.id
+where p.code = '1'
+  and p.name = '11111';
 
 
 
@@ -471,49 +428,13 @@ select 'aa_goodsposition', 'delete', 'deleteGoodsPositionBeforeRule', 10, null, 
 from tenant where not exists(select 1 from billruleregister where billnum='aa_goodsposition' and action='delete' and ruleId='deleteGoodsPositionBeforeRule'
     and tenant_id=0 and `key` is null) limit 1;
 
-
-select *
-from billruleregister
-where tenant_id = 0
-  and billnum in ('aa_goodsposition','common')
-  and action = 'save'
-order by iorder;
-
-
-select *
-from aa_goodsproductscomparison;
-
-
-
-
-select *
-from bill_base where cBillNo='aa_goodsproductscomparison_position' and tenant_id=0;
-
-
-
-select *
-from billruleregister
-where ruleId = 'referenceCheckRule'
-  and tenant_id = 0;
-
-select *
-from billruleregister
-where action = 'save'
-  and billnum in('common','aa_goodsposition')
-  and tenant_id = 1292161350684928 order by iorder;
-
-# 1838010622546176
-
-
-
-
 # [自定义]保存insert[货位]前校验
 INSERT INTO billruleregister (billnum, action, ruleId, iorder, overrule, tenant_id, `key`, isSystem, url,
                                      config, isAsyn, domain, dataRule)
 select 'aa_goodsposition',
        'save',
        'saveGoodsPositionBeforeRule',
-       10,
+       28,
        null,
        tenant.id,
        null,
@@ -530,68 +451,43 @@ where not exists(select *
 # 再加一下0租户的（为已有租户注册了 新注册的租户还没有这个rule 需要参考0租户的这个）
 INSERT INTO billruleregister (billnum, action, ruleId, iorder, overrule, tenant_id, `key`, isSystem, url,
                                      config, isAsyn, domain, dataRule)
-select 'aa_goodsposition', 'save', 'saveGoodsPositionBeforeRule', 10, null, 0, null, true, null,
+select 'aa_goodsposition', 'save', 'saveGoodsPositionBeforeRule', 28, null, 0, null, true, null,
         null, 0, null, null
 from tenant where not exists(select 1 from billruleregister where billnum='aa_goodsposition' and action='save' and ruleId='saveGoodsPositionBeforeRule'
     and tenant_id=0 and `key` is null) limit 1;
 
-select cStyle
-from billitem_base where cStyle is not null and tenant_id=0;
 
-
-
-select *
-from billruleregister where tenant_id=1292161350684928 and ruleId='saveGoodsPositionBeforeRule';
-
-
-select *
-from aa_goodsposition
-where tenant_id = 1849710349897984
-  and warehouseId = 1954106920014080
-  and isEnd = true;
-
-
-select *
-from billruleregister
-where action='refer' and billnum='common'
-  and tenant_id = 1849710349897984 order by iorder;
-
-
-
-select *
-from aa_goodsproductscomparison;
-
-
-select *
-from tenant where alias='lzu07egu';
-
-
-select *
-from aa_goodsposition where tenant_id=1849710349897984;
-
-
-select code,pubts
-from aa_goodsposition
-where tenant_id = 1849710349897984
-  and isFastAdd = false
-order by id desc;
-
-select iUsed
-from aa_warehouse
-
-select *
-from bill_base where cBillNo='aa_goodsproductscomparison';
-
-
-
-
-select *
-from billruleregister where tenant_id=1838010622546176 and ruleId='saveGoodsPositionBeforeRule';
+INSERT INTO billruleregister (billnum, action, ruleId, iorder, overrule, tenant_id, `key`, isSystem, url,
+                                     config, isAsyn, domain, dataRule)
+select 'aa_goodsposition',
+       'save',
+       'saveGoodsPositionafterRule',
+       31,
+       null,
+       tenant.id,
+       null,
+       true,
+       null,
+       null,
+       0,
+       null,
+       null
+from tenant
+where not exists(select *
+                 from billruleregister
+                 where billnum = 'aa_goodsposition' and action = 'save' and ruleId = 'saveGoodsPositionafterRule');
+# 再加一下0租户的（为已有租户注册了 新注册的租户还没有这个rule 需要参考0租户的这个）
+INSERT INTO billruleregister (billnum, action, ruleId, iorder, overrule, tenant_id, `key`, isSystem, url,
+                                     config, isAsyn, domain, dataRule)
+select 'aa_goodsposition', 'save', 'saveGoodsPositionafterRule', 31, null, 0, null, true, null,
+        null, 0, null, null
+from tenant where not exists(select 1 from billruleregister where billnum='aa_goodsposition' and action='save' and ruleId='saveGoodsPositionafterRule'
+    and tenant_id=0 and `key` is null) limit 1;
 
 
 # [快速定义]
 select *
-from billforeignkey WHERE entityname='GoodsPosition' and   target='parent';
+from billforeignkey WHERE entityname='Department' and   target='parent';
 
 INSERT INTO billforeignkey (type, entityname, billno, source, sourceattr, target, extra, extraTarget,
                                    extra_condition, tenant_id, sort)
@@ -602,19 +498,7 @@ from tenant where not exists(select 1 from billforeignkey where entityname='Good
 # 线索树！！！
 select id from aa_goodsposition where erpCode = parentname;
 
-select org_id
-from aa_warehouse
-where id = 1926134335607040;
-
 # 一个仓库 - 多个库存组织
-
-
-select isGoodsPosition from aa_warehouse where id=1916524028399872
-
-select *
-from billruleregister
-where ruleId = 'getGoodsPositionRefBeforeRule'
-  and tenant_id = 1849710349897984;
 
 
 
@@ -625,19 +509,101 @@ bmain viewmodel只能取主表的数据
 很多问题就是excel配的有问题
 
 没热部署上 重启服务
-
-
-select *
-from aa_goodsposition where tenant_id=1292161350684928;
-P_YS_PF_PROCENTER_0001134518
-
-
-select id
-from aa_goodsposition where name='lichitest';
-
-
-就是 单个/批量修改时 不能改仓库和货位 是吧
-
-select *
-from aa_goodsproductscomparison;
 tail -f .log日志文件 | grep -C10  'keyword'
+
+
+select *
+from billruleregister
+where tenant_id = 0
+  and billnum in ('aa_goodsposition', 'common')
+  and action = 'save'
+order by iorder;
+
+
+
+# 处理返回的json name 值
+INSERT INTO billruleregister (billnum, action, ruleId, iorder, overrule, tenant_id, `key`, isSystem, url,
+                                     config, isAsyn, domain, dataRule)
+select 'aa_goodsproductscomparisonlist',
+       'querytree',
+       'querytreeComparisonlistBeforeRule',
+       40,
+       null,
+       tenant.id,
+       null,
+       true,
+       null,
+       null,
+       0,
+       null,
+       null
+from tenant
+where not exists(select *
+                 from billruleregister
+                 where billnum = 'aa_goodsproductscomparisonlist' and action = 'querytree' and ruleId = 'querytreeComparisonlistBeforeRule');
+# 再加一下0租户的（为已有租户注册了 新注册的租户还没有这个rule 需要参考0租户的这个）
+INSERT INTO billruleregister (billnum, action, ruleId, iorder, overrule, tenant_id, `key`, isSystem, url,
+                                     config, isAsyn, domain, dataRule)
+select 'aa_goodsproductscomparisonlist', 'querytree', 'querytreeComparisonlistBeforeRule', 40, null, 0, null, true, null,
+        null, 0, null, null
+from tenant where not exists(select 1 from billruleregister where billnum='aa_goodsproductscomparisonlist' and action='querytree' and ruleId='querytreeComparisonlistBeforeRule'
+    and tenant_id=0 and `key` is null) limit 1;
+
+
+# 相同货位号并发测试没有提示货位号重复
+# 给code,tenant_id字段 加 联合唯一索引
+alter ignore table aa_goodsposition
+    add unique index (code, tenant_id);
+# https://blog.csdn.net/weistin/article/details/79698996
+# https://blog.csdn.net/badplayerz/article/details/53608087
+
+
+select *
+from pub_ref
+where code = 'aa_goodspositionref';
+
+
+INSERT INTO ugoods.pub_ref (id, code, name, description, reftype, isorgrel, datasourcetype, datasourcesql,
+                            datasourcegridsql, iparentrefid, csub_id, centitykeyfld, ctpltype, centitynamefld, cretfld,
+                            bmultisel, creffiltersql, cautocompletefiltersql, bauth, ccheckflds, ctipprefix, ctipfld,
+                            ifilterstyle, ishowstyle, bpage, lPageSize, cdatagrid_fullname, cdatagrid_classfk,
+                            cdataclass_fullname, cdataclass_refclsname, bdataclass_rule, bdataclass_retenddata,
+                            cdataclass_lscode, cdataclass_lsname, cdataclass_sortfield, clsname, sortfield, cbillnum,
+                            eventbean, svcKey, cFilterId, authType, extendField, domain, treedomain, name_resid)
+VALUES (111241, 'aa_goodspositionref', '货位参照', '货位参照', 'aa_goodspositionref', null, 'meta', null, null, null, 'AA',
+        'code', 'Table', 'name', 'code', false, '0', null, false, 'code,name', null, null, null, null, false, null,
+        'aa.goodsposition.GoodsPosition', 'id', 'aa.goodsposition.GoodsPosition', 'code', false, false, 'code', 'name',
+        'code', 'name', null, 'aa_goodspositionref', null, '/bill', null, null, '{"placeholder":"编码/名称"}', null, null,
+        null);
+
+
+
+INSERT INTO ugoods.pub_ref (id, code, name, description, reftype, isorgrel, datasourcetype, datasourcesql,
+                            datasourcegridsql, iparentrefid, csub_id, centitykeyfld, ctpltype, centitynamefld, cretfld,
+                            bmultisel, creffiltersql, cautocompletefiltersql, bauth, ccheckflds, ctipprefix, ctipfld,
+                            ifilterstyle, ishowstyle, bpage, lPageSize, cdatagrid_fullname, cdatagrid_classfk,
+                            cdataclass_fullname, cdataclass_refclsname, bdataclass_rule, bdataclass_retenddata,
+                            cdataclass_lscode, cdataclass_lsname, cdataclass_sortfield, clsname, sortfield, cbillnum,
+                            eventbean, svcKey, cFilterId, authType, extendField, domain, ideleted)
+VALUES (111241, 'at_sourceBillList', '来源单据', '来源单据', null, null, 'sql',
+        'select cbillno as id,cbillno as code,cname as name from bill_base where tenant_id=0;', null, null, 'AT', null,
+        'Table', 'name', 'code', false, '0', null, false, 'cBillNo,cName', null, null, null, null, null, null, null, null,
+        null, null, null, null, null, null, null, null, null, 'pub_refList', null, null, null, null, null, null, false);
+
+
+select *
+from auth where code like '%aa_goods%';
+服务编码：aa_goodsposition aa_goodsproductscomparisonlist
+
+
+
+# [需求]
+货位物料对照列表 上方查询区问题 112 116
+
+
+ SELECT a.authid
+from bill_command a
+where billnumber=#{billnumber} and tenant_id=#{tenant_Id}
+      and `action` in ('list','detail')
+
+

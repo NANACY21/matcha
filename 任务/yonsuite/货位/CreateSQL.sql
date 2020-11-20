@@ -126,21 +126,21 @@ set @id94=@id93+1;
 insert into bill_toolbaritem(`id`,`billnumber`,`toolbar`,`name`,`command`,`type`,`style`,`text`,`parameter`,`imgsrc`,`parent`,`order`,`subid`,`system`,`authid`,`authcontrol`,`authname`,`bMerge`,`icon`,`sysid`,`tenant_id`,`auth_level`,`cDataRule`) values (@id94,'aa_goodsproductscomparisonlist','ListHeader_1','btnBillsetting','cmdBillsetting','button',0,'UI模板',null,null,null,7,'AA',1,null,1,null,1,null,null,0,null,null);
 
 select ifnull(max(id),0)+1 into @id99 from bill_command;
-insert into bill_command(`id`,`name`,`action`,`billnumber`,`target`,`ruleid`,`svcurl`,`httpmethod`,`subid`,`system`,`parameter`,`authid`) values (@id99,'cmdAdd','addgoodsproductscomparisonmap','aa_goodsproductscomparisonlist',null,null,'/bill/add.do','GET','AA',1,null,null);
+insert into bill_command(`id`,`name`,`action`,`billnumber`,`target`,`ruleid`,`svcurl`,`httpmethod`,`subid`,`system`,`parameter`,`authid`) values (@id99,'cmdAdd','addgoodsproductscomparisonmap','aa_goodsproductscomparisonlist',null,null,'/bill/add.do','GET','AA',1,null,'aa_goodsproductscomparisonlistadd');
 set @id100=@id99+1;
-insert into bill_command(`id`,`name`,`action`,`billnumber`,`target`,`ruleid`,`svcurl`,`httpmethod`,`subid`,`system`,`parameter`,`authid`) values (@id100,'cmdEdit','editgoodsproductscomparisonmap','aa_goodsproductscomparisonlist',null,null,'/bill/edit.do','GET','AA',1,null,null);
+insert into bill_command(`id`,`name`,`action`,`billnumber`,`target`,`ruleid`,`svcurl`,`httpmethod`,`subid`,`system`,`parameter`,`authid`) values (@id100,'cmdEdit','editgoodsproductscomparisonmap','aa_goodsproductscomparisonlist',null,null,'/bill/edit.do','GET','AA',1,null,'aa_goodsproductscomparisonlistedit');
 set @id101=@id100+1;
-insert into bill_command(`id`,`name`,`action`,`billnumber`,`target`,`ruleid`,`svcurl`,`httpmethod`,`subid`,`system`,`parameter`,`authid`) values (@id101,'cmdExport','batchoutput','aa_goodsproductscomparisonlist',null,null,'/bill/export','POST','AA',1,null,null);
+insert into bill_command(`id`,`name`,`action`,`billnumber`,`target`,`ruleid`,`svcurl`,`httpmethod`,`subid`,`system`,`parameter`,`authid`) values (@id101,'cmdExport','batchoutput','aa_goodsproductscomparisonlist',null,null,'/bill/export','POST','AA',1,null,'aa_goodsproductscomparisonlistexport');
 set @id102=@id101+1;
 insert into bill_command(`id`,`name`,`action`,`billnumber`,`target`,`ruleid`,`svcurl`,`httpmethod`,`subid`,`system`,`parameter`,`authid`) values (@id102,'cmdQueryTree','querytree','aa_goodsproductscomparisonlist',null,null,'/bill/querytree','POST','AA',1,null,null);
 set @id103=@id102+1;
 insert into bill_command(`id`,`name`,`action`,`billnumber`,`target`,`ruleid`,`svcurl`,`httpmethod`,`subid`,`system`,`parameter`,`authid`) values (@id103,'cmdGetRefData','getRefData','aa_goodsproductscomparisonlist',null,null,'/bill/getrefdata','POST','AA',1,null,null);
 set @id104=@id103+1;
-insert into bill_command(`id`,`name`,`action`,`billnumber`,`target`,`ruleid`,`svcurl`,`httpmethod`,`subid`,`system`,`parameter`,`authid`) values (@id104,'cmdList','list','aa_goodsproductscomparisonlist',null,null,'/bill/list','POST','AA',1,null,null);
+insert into bill_command(`id`,`name`,`action`,`billnumber`,`target`,`ruleid`,`svcurl`,`httpmethod`,`subid`,`system`,`parameter`,`authid`) values (@id104,'cmdList','list','aa_goodsproductscomparisonlist',null,null,'/bill/list','POST','AA',1,null,'aa_goodsproductscomparisonlist');
 set @id105=@id104+1;
-insert into bill_command(`id`,`name`,`action`,`billnumber`,`target`,`ruleid`,`svcurl`,`httpmethod`,`subid`,`system`,`parameter`,`authid`) values (@id105,'cmdDelete','batchdelete','aa_goodsproductscomparisonlist',null,null,'/bill/batchdelete','POST','AA',1,null,null);
+insert into bill_command(`id`,`name`,`action`,`billnumber`,`target`,`ruleid`,`svcurl`,`httpmethod`,`subid`,`system`,`parameter`,`authid`) values (@id105,'cmdDelete','batchdelete','aa_goodsproductscomparisonlist',null,null,'/bill/batchdelete','POST','AA',1,null,'aa_goodsproductscomparisonlistdelete');
 set @id106=@id105+1;
-insert into bill_command(`id`,`name`,`action`,`billnumber`,`target`,`ruleid`,`svcurl`,`httpmethod`,`subid`,`system`,`parameter`,`authid`) values (@id106,'cmdDeleteRow','batchdelete','aa_goodsproductscomparisonlist','warehouseToobar_table',null,'/bill/batchdelete','POST','AA',1,null,null);
+insert into bill_command(`id`,`name`,`action`,`billnumber`,`target`,`ruleid`,`svcurl`,`httpmethod`,`subid`,`system`,`parameter`,`authid`) values (@id106,'cmdDeleteRow','batchdelete','aa_goodsproductscomparisonlist','warehouseToobar_table',null,'/bill/batchdelete','POST','AA',1,null,'aa_goodsproductscomparisonlistdelete');
 set @id107=@id106+1;
 insert into bill_command(`id`,`name`,`action`,`billnumber`,`target`,`ruleid`,`svcurl`,`httpmethod`,`subid`,`system`,`parameter`,`authid`) values (@id107,'cmdBillsetting','billsetting','aa_goodsproductscomparisonlist','warehouseToobar_table',null,'/bill/billsetting','POST','AA',1,null,null);
 

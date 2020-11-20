@@ -29,3 +29,14 @@ select * from pb_filter_solution_common where tenant_id = @tenant and solutionId
 select * from bill_toolbar where tenant_id = @tenant and billnumber = @billNo;
 select * from bill_toolbaritem where  tenant_id = @tenant and billnumber = @billNo;
 select * from bill_command where tenant_id = @tenant and billnumber = @billNo;
+
+
+# [解释]
+一个环境 一个billnum
+0租户/非0租户
+excel->sql脚本 执行 为0租户的
+非0租户 给定billnum再执行
+# [billitem_base]
+# 表格中 列宽200
+# [bill_command]
+# action 为list 时 authid为 服务编码

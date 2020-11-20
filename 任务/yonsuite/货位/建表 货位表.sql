@@ -5,7 +5,7 @@
 -- Table structure for aa_goodsposition
 -- ----------------------------
 DROP TABLE IF EXISTS `aa_goodsposition`;
-CREATE TABLE `aa_goodsposition` (
+CREATE TABLE IF NOT EXISTS `aa_goodsposition` (
 	`id` bigint NOT NULL AUTO_INCREMENT COMMENT '主键',
 	`code` varchar(20) COMMENT '货位号',
 	`name` varchar(50) COMMENT '货位名称',
