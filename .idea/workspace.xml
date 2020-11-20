@@ -2,43 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9cae0b1d-fa9e-4477-9c04-b936e6df5af0" name="Default Changelist" comment="日常提交">
-      <change afterPath="$PROJECT_DIR$/任务/yonsuite/物料规格/停用规格值前校验.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/任务/营销云/商品档案,物料档案一品多码要支持设置计量单位.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/任务/营销云/用户分组.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/笔记/UI元数据/教程.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/笔记/前端启动命令.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/笔记/多语.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/笔记/用友.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/笔记/营销云/使用教程.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/06c98747-efc0-420d-82df-a93247c4b88f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/06c98747-efc0-420d-82df-a93247c4b88f.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/06c98747-efc0-420d-82df-a93247c4b88f/storage_v2/_src_/schema/ugoods.AZiGzQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/06c98747-efc0-420d-82df-a93247c4b88f/storage_v2/_src_/schema/ugoods.AZiGzQ.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/06c98747-efc0-420d-82df-a93247c4b88f/storage_v2/_src_/schema/ustock.wfcxzg.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/06c98747-efc0-420d-82df-a93247c4b88f/storage_v2/_src_/schema/ustock.wfcxzg.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/365c6669-c4eb-492c-a27e-37b9f308d18d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/365c6669-c4eb-492c-a27e-37b9f308d18d.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/365c6669-c4eb-492c-a27e-37b9f308d18d/storage_v2/_src_/schema/ugoods.AZiGzQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/365c6669-c4eb-492c-a27e-37b9f308d18d/storage_v2/_src_/schema/ugoods.AZiGzQ.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/da585ba9-c5ae-4854-8d0e-0ab75233a518.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/da585ba9-c5ae-4854-8d0e-0ab75233a518.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/任务/yonsuite/物料模板中增加对应SKU编码规则.sql" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/物料模板中增加对应SKU编码规则.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/任务/yonsuite/维护领域元数据/维护领域元数据.sql" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/维护领域元数据/维护领域元数据.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/CreateSQL.sql" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/货位/CreateSQL.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/new.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/建表 货位表.sql" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/货位/建表 货位表.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/新增[货位]菜单.sql" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/货位/新增[货位]菜单.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/货位树卡.xlsm" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/货位/货位树卡.xlsm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/货位物料对照列表.xlsm" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/货位/货位物料对照列表.xlsm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/货位物料对照卡片position.xlsm" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/货位/货位物料对照卡片position.xlsm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/任务/yonsuite/附件分组/附件分组列表_CreateSQL.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/任务/yonsuite/附件分组/附件分组卡片_CreateSQL.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/任务/yonsuite/附件分组/附件分组项卡片_CreateSQL.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/其它/草纸20200812.sql" beforeDir="false" afterPath="$PROJECT_DIR$/其它/草纸20200812.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/其它/草纸2020081202..sql" beforeDir="false" afterPath="$PROJECT_DIR$/其它/草纸2020081202..sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/Git/git操作.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/Git/git操作.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/UI元数据/某一个页面的MySQL信息.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/UI元数据/某一个页面的MySQL信息.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/UI元数据/查询excel所有数据.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/UI元数据/查询excel所有数据.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/yonsuite/使用教程.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/yonsuite/使用教程.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/密码.txt" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/密码.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/开发步骤.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/开发步骤.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/用户 角色 权限 菜单.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/用户 角色 权限 菜单.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,10 +81,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="60" y="302" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1605840684224" />
-    <state x="677" y="151" key="CommitChangelistDialog2" timestamp="1605767364962">
+    <state x="677" y="151" key="CommitChangelistDialog2" timestamp="1605842449480">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="677" y="151" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1605767364962" />
+    <state x="677" y="151" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1605842449480" />
     <state x="198" y="100" key="DiffContextDialog" timestamp="1603789856909">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -141,10 +105,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state width="1760" height="384" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1605842144167" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1603954063016">
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1605842370555">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1603954063016" />
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1605842370555" />
     <state x="681" y="307" width="826" height="805" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1605601734059">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
