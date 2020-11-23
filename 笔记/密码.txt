@@ -69,3 +69,7 @@ MySQL连接信息
                 Port：53291
                 User：developer
                 Password：4lGm9D51iFiHJF6j
+
+                查询仓 数据库 ugoods1
+            预发环境
+                预发环境查询仓连接：营销 172.20.47.57:3373 ro_all_db/xD2rjcwAqaVpRkGb
