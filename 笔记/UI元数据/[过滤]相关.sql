@@ -1,4 +1,4 @@
-# 有需要 删除ui元数据 过滤相关表的数据 aa_goodsproductscomparisonlist
+# 有需要 删除ui元数据 过滤相关表的数据
 set @billno = 'aa_goodsproductscomparisonlist';
 set @tenantId = 1292161350684928;
 select id

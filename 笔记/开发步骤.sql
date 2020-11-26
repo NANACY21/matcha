@@ -27,10 +27,7 @@
 # 按钮支持重复调用 已启用时再点启用 仍试图启用
 # 删除用户时 用户不存在 也是删除成功
 
-# 租户id
-# cb.rest.AppContext.tenant.id
-# ys
-# cb.rest.AppContext.productcenter.tenant.id
+
 
 
 # 别的领域调用时 他的token：

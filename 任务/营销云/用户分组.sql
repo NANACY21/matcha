@@ -1,8 +1,4 @@
-业务权限设置 支持 按用户分组过滤
-
-
-select *
-from bill_base where id=1000763680;
+# 业务权限设置 支持 按用户分组过滤
 
 # 该sql使用 新增/已有的tplgroup
 insert into billitem_base(cSubId, iBillId, cFieldName, cName, cCaption, cShowCaption, iBillEntityId, iBillTplGroupId, iTplId, iOrder, iMaxLength, iFieldType, bEnum, cEnumString, bMustSelect, bHidden, cRefType, cRefId, cRefRetId, cDataRule, iFunctionType, bSplit, bExtend, iNumPoint, bCanModify, cSourceType, iMaxShowLen, cMemo, iColWidth, cSumType, iAlign, bNeedSum, bShowIt, bFixed, bFilter, cDefaultValue, cFormatData, cUserId, iTabIndex, bIsNull, bPrintCaption, bJointQuery, bPrintUpCase, bSelfDefine, cSelfDefineType, cDataSourceName, cOrder, bCheck, cControlType, refReturn, bShowInRowAuth, iRowAuthBillId, cStyle, bRowAuthControlled,bVmExclude,tenant_id, multiple, depends, cDefineName, makeField, cSensFieldName)

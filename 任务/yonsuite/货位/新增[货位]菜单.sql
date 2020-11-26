@@ -514,10 +514,14 @@ tail -f .log日志文件 | grep -C10  'keyword'
 
 select *
 from billruleregister
-where tenant_id = 0
-  and billnum in ('aa_goodsposition', 'common')
+where tenant_id = 1869389165678848
+  and billnum in ('aa_user', 'common')
   and action = 'save'
 order by iorder;
+
+
+select *
+from billruleregister where ruleId like '%import%';
 
 
 

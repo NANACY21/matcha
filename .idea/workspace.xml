@@ -2,8 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9cae0b1d-fa9e-4477-9c04-b936e6df5af0" name="Default Changelist" comment="日常提交">
+      <change afterPath="$PROJECT_DIR$/笔记/UI元数据/某页面.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/笔记/command.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/密码.txt" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/密码.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/CreateSQL.sql" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/货位/CreateSQL.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/新增[货位]菜单.sql" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/货位/新增[货位]菜单.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/货位树卡.xlsm" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/货位/货位树卡.xlsm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/货位物料对照列表.xlsm" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/货位/货位物料对照列表.xlsm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/货位物料对照卡片position.xlsm" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/货位/货位物料对照卡片position.xlsm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/任务/营销云/商品档案,物料档案一品多码要支持设置计量单位.sql" beforeDir="false" afterPath="$PROJECT_DIR$/任务/营销云/商品档案,物料档案一品多码要支持设置计量单位.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/任务/营销云/用户分组.sql" beforeDir="false" afterPath="$PROJECT_DIR$/任务/营销云/用户分组.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/其它/草纸2020081202..sql" beforeDir="false" afterPath="$PROJECT_DIR$/其它/草纸2020081202..sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/UI元数据/[过滤]相关.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/UI元数据/[过滤]相关.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/UI元数据/教程.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/UI元数据/教程.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/UI元数据/某一个页面的MySQL信息.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/UI元数据/某一页面MySQL.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/UI元数据/查询excel所有数据.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/yonsuite/使用教程.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/yonsuite/使用教程.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/开发步骤.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/开发步骤.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/营销云/使用教程.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/营销云/使用教程.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +38,30 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="ys测试环境" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="ys测试环境" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="ys测试环境" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="ugoods: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="ys测试环境" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="ugoods: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="Git.Settings">
@@ -56,7 +96,35 @@
             <expand>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:ys测试环境" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:ys测试环境" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@685e9f9a" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:ys测试环境" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@3942fa8a" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:ys生产环境" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:ys生产环境" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@103c721" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:营销云itg环境" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:营销云itg环境" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@4995f085" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -78,50 +146,50 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="60" y="302" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1605840684224" />
-    <state x="677" y="151" key="CommitChangelistDialog2" timestamp="1606098357990">
+    <state x="677" y="151" key="CommitChangelistDialog2" timestamp="1606391923551">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="677" y="151" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1606098357990" />
-    <state x="198" y="100" key="DiffContextDialog" timestamp="1603789856909">
+    <state x="677" y="151" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1606391923551" />
+    <state x="198" y="100" key="DiffContextDialog" timestamp="1606112427287">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="198" y="100" key="DiffContextDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1603789856909" />
-    <state width="1760" height="318" key="GridCell.Tab.0.bottom" timestamp="1606101663052">
+    <state x="198" y="100" key="DiffContextDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1606112427287" />
+    <state width="1760" height="425" key="GridCell.Tab.0.bottom" timestamp="1606391854825">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1760" height="318" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1606101663052" />
-    <state width="1760" height="318" key="GridCell.Tab.0.center" timestamp="1606101663052">
+    <state width="1760" height="425" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1606391854825" />
+    <state width="1760" height="425" key="GridCell.Tab.0.center" timestamp="1606391854825">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1760" height="318" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1606101663052" />
-    <state width="1760" height="318" key="GridCell.Tab.0.left" timestamp="1606101663052">
+    <state width="1760" height="425" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1606391854825" />
+    <state width="1760" height="425" key="GridCell.Tab.0.left" timestamp="1606391854825">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1760" height="318" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1606101663052" />
-    <state width="1760" height="318" key="GridCell.Tab.0.right" timestamp="1606101663052">
+    <state width="1760" height="425" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1606391854825" />
+    <state width="1760" height="425" key="GridCell.Tab.0.right" timestamp="1606391854825">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1760" height="318" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1606101663052" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1605842506334">
+    <state width="1760" height="425" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1606391854825" />
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1606112437540">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1605842506334" />
-    <state x="681" y="307" width="826" height="805" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1605601734059">
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1606112437540" />
+    <state x="681" y="307" width="826" height="805" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1606356492881">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="681" y="307" width="826" height="805" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1605601734059" />
-    <state x="717" y="386" key="com.intellij.ide.util.TipDialog" timestamp="1606096128014">
+    <state x="681" y="307" width="826" height="805" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1606356492881" />
+    <state x="717" y="386" key="com.intellij.ide.util.TipDialog" timestamp="1606354556777">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="717" y="386" key="com.intellij.ide.util.TipDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1606096128014" />
-    <state x="713" y="311" width="1000" height="490" key="find.popup" timestamp="1605612687630">
+    <state x="717" y="386" key="com.intellij.ide.util.TipDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1606354556777" />
+    <state x="713" y="311" width="1168" height="490" key="find.popup" timestamp="1606271037526">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="713" y="311" width="1000" height="490" key="find.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1605612687630" />
-    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup" timestamp="1606111054609">
+    <state x="713" y="311" width="1168" height="490" key="find.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1606271037526" />
+    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup" timestamp="1606390365719">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1606111054609" />
+    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1606390365719" />
     <state x="747" y="475" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1606101706667">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>

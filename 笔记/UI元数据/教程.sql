@@ -11,4 +11,18 @@ billruleregister表：用于注册，其字段ruleId -- bean id，billnum字段 
 brand表：品牌表，其字段为品牌属性；
 pub_ref表：参照表，reftype字段和code字段值一样；
 excel中，对应数据表名；
-物料档案列表.xlsm；
+物料档案列表.xlsm
+
+
+# [解释]
+一个环境 一个billnum
+0租户/非0租户
+excel->sql脚本 执行 为0租户的
+非0租户 给定billnum再执行
+# [bill_base]
+# bill_base表 cBillNo相同 租户不同 id不同
+# 相同页面 每个租户的页面id不一样 编码cbillno一样
+# [billitem_base]
+# 表格中 列宽200
+# [bill_command]
+# action 为list 时 authid为 服务编码

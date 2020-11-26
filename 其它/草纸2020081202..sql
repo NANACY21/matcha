@@ -101,10 +101,6 @@ INSERT INTO aa_enum (enumtype, nametype, enumcode, localid, enumname, subid, ide
                      description)
 VALUES ('sys_action', 'text', 'stop', 'zh-cn', '停用', 'aa', 0, 0, null, 'sys_action');
 
-
-select *
-from uorders.agent where tena;
-
 取消执行后面rule（引起） 导致返回结果改变 导致前端报错（现象原因）
 
 
@@ -132,9 +128,6 @@ select *
 from aa_goodsproductscomparison;
 
 
-desc aa_goodsposition;
-
-
 select *
 from billtplgroup_base where cStyle like '%tab-padding-bottom%';
 
@@ -152,6 +145,13 @@ select *
 from bill_base where cBillno='aa_customerref';
 
 
+导入没验重->第一反应 导入请求 中 加验重方法 其实不必如此 导入走了saveuserbeforerule
+只需加服务参数 因为导入是另一个服务
 
-select user_type
-from user where mobile='61234566';
+
+
+什么时候上预发 问测试
+最晚什么时候上预发 问陈哥
+
+
+

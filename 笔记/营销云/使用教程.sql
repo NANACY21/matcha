@@ -16,3 +16,13 @@ properties别提交
 billitembase reftype字段：productcenter.**->该参照ui元数据在productcenter
 
 pub_ref表 cbillnum 字段有值->预置ui元数据在自己领域
+
+
+[服务注册]
+一个main - 一个服务
+本地启 启一个服务 调其它服务时 其他服务不在本地
+那个服务挂了 本地和itg应该效果一样 但是本地和itg zookeeper配置不同，用的不是同一个zk实例...
+现在 改成本地/itg用同一个zk实例（service.properties中设置）
+zookeeper/dubbo
+服务提供者/消费者
+zookeeper的所在ip地址 端口 不同 多个zookeeper
