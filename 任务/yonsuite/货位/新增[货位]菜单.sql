@@ -509,7 +509,7 @@ bmain viewmodel只能取主表的数据
 很多问题就是excel配的有问题
 
 没热部署上 重启服务
-tail -f .log日志文件 | grep -C10  'keyword'
+
 
 
 select *

@@ -124,8 +124,7 @@ from pub_ref where code='aa_goodspositionref';
 
 
 
-select *
-from aa_goodsproductscomparison;
+
 
 
 select *
