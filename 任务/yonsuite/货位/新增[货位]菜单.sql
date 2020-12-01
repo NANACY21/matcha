@@ -484,15 +484,26 @@ select 'aa_goodsposition', 'save', 'saveGoodsPositionafterRule', 31, null, 0, nu
 from tenant where not exists(select 1 from billruleregister where billnum='aa_goodsposition' and action='save' and ruleId='saveGoodsPositionafterRule'
     and tenant_id=0 and `key` is null) limit 1;
 
-
+desc aa_warehouse;
 # [快速定义]
 select *
-from billforeignkey WHERE entityname='Department' and   target='parent';
+from billforeignkey WHERE entityname='GoodsPosition';
 
 INSERT INTO billforeignkey (type, entityname, billno, source, sourceattr, target, extra, extraTarget,
                                    extra_condition, tenant_id, sort)
 select 0, 'GoodsPosition', 'aa_goodsposition', 'parent_name', 'erpCode', 'parent', null, null, null, null, 0
 from tenant where not exists(select 1 from billforeignkey where entityname='GoodsPosition' and billno='aa_goodsposition') limit 1;
+
+
+INSERT INTO billforeignkey (type, entityname, billno, source, sourceattr, target, extra, extraTarget,
+                                   extra_condition, tenant_id, sort)
+select 0, 'GoodsPosition', 'aa_goodsposition', 'warehouseId_name', 'code', 'warehouseId', null, null, null, null, 0
+from tenant where not exists(select 1 from billforeignkey where entityname='GoodsPosition' and billno='aa_goodsposition' and source='warehouseId_name') limit 1;
+
+INSERT INTO billforeignkey (type, entityname, billno, source, sourceattr, target, extra, extraTarget,
+                                   extra_condition, tenant_id, sort)
+select 0, 'GoodsPosition', 'aa_goodsposition', 'parent_name', 'code', 'parent', null, null, null, null, 0
+from tenant where not exists(select 1 from billforeignkey where entityname='GoodsPosition' and billno='aa_goodsposition' and source='parent_name' and sourceattr='code') limit 1;
 
 
 # 线索树！！！
@@ -611,3 +622,20 @@ where billnumber=#{billnumber} and tenant_id=#{tenant_Id}
       and `action` in ('list','detail')
 
 
+
+
+
+select T0.code as `code`,T0.name as `name`,T0.name2 as `name2`,T0.name3 as `name3`,T0.name4 as `name4`,T0.name5 as `name5`,T0.name6 as `name6`,T0.id as `id`,T0.bMRP as `bMRP`,T0.iJoinStockQuery as `joinStockQuery`,T0.iSerialManage as `iSerialManage`,T0.isGoodsPosition as `isGoodsPosition`,T0.eStore as `eStore`,T0.wStore as `wStore`,T0.isSubcontractW as `isSubcontractW`,T0.isInvertedScour as `isInvertedScour`,T0.isWasteWarehouse as `isWasteWarehouse`,T1.org_id as `stocks_org`,T2.cName as `stocks_org_name`
+from aa_warehouse T0
+left join aa_warehouse_stock as T1 on T1.warehouse_id=T0.id
+left join v_orgs as T2 on T2.id=T1.org_id and T2.tenant_id=1994248815448320
+where (T0.isGoodsPosition=true and T0.iUsed='enable' and (T0.org_id is null or T0.org_id in ('1996536359407872','1996971911205120','2013623862513920','1995349490503936','1995335968297216','1996544698601728','1997293363794176','1996973516607744','2008343208382720','666666','2013536002134272','1994395759431936','1994405933125888','1996972715249920','1994404723265792','1994400412242176')) and T0.tenant_id=1994248815448320)
+limit 0,10;
+
+
+select *
+from bill_toolbar where billnumber='aa_goodsposition';
+
+
+select *
+from aa_goodsposition where warehouseId=1984027502203136;

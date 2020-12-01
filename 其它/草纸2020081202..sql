@@ -153,4 +153,7 @@ from bill_base where cBillno='aa_customerref';
 最晚什么时候上预发 问陈哥
 
 
+select *
+from user where mobile=17912341234;
+
 

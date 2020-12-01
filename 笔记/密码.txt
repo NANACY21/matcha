@@ -37,7 +37,17 @@ yonsuite
 
 MySQL连接信息
     yonsuite
-        预发环境
+        测试环境
+            db.main.driver=com.mysql.jdbc.Driver
+            db.main.url=jdbc:mysql://172.20.56.136:3306/ugoods?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+            db.main.userName=chenhy
+            db.main.password=Q6901j9W34YldOA
+
+            db.meta.driver=com.mysql.jdbc.Driver
+            db.meta.url
+            db.meta.userName
+            db.meta.password=Yonyou@1988
+        预发(demo)环境
             db.main.driver=com.mysql.jdbc.Driver
             db.main.url=jdbc:mysql://rm-2zeff8189910d519x.mysql.rds.aliyuncs.com:3306/ugoods?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
             db.main.userName=yx_cloud
@@ -46,17 +56,17 @@ MySQL连接信息
             developer@172.20.58.110
             yonyou@1988
             172.20.58.110：22 developer 1988@yonyou
-        日常环境
+        日常环境（写库）
             db.main.driver=com.mysql.jdbc.Driver
-            db.main.url=jdbc:mysql://172.20.56.97:3306/ugoods?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&autoReconnect=true
-            db.main.userName=chenhy
-            db.main.password=Q6901j9W34YldOA
-        日常环境（新）
-            链接配置 172.20.47.57:8306
-            ro_all_db /eruij6g98_35
+            db.main.url=jdbc:mysql://172.20.47.57:8306/ugoods?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&autoReconnect=true
+            db.main.userName=ro_all_db
+            db.main.password=eruij6g98_35
         生产环境
             172.20.47.57:3354
             ro_all_db/HYv3LPgf9%W*vLeh/只读账户
+
+            ys正式环境(推公有云)
+            只读账号
     营销云
         基础服务
             公有云环境
@@ -73,3 +83,13 @@ MySQL连接信息
                 查询仓 数据库 ugoods1
             预发环境
                 预发环境查询仓连接：营销 172.20.47.57:3373 ro_all_db/xD2rjcwAqaVpRkGb
+            itg环境
+                db.uimeta.driver=com.mysql.jdbc.Driver
+                db.uimeta.url
+                db.uimeta.userName
+                db.uimeta.password=lsUPC@180806
+    CentOS6.5
+        主库
+            password 1
+        从库
+            password 1

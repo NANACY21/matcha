@@ -7,47 +7,29 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://localhost:3306?serverTimezone=UTC</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="ys日常环境" uuid="6f78fd5e-1a2e-496b-b684-2227c162234e">
+    <data-source source="LOCAL" name="yonsuite测试" uuid="06c98747-efc0-420d-82df-a93247c4b88f">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
-      <remarks>db.main.url
-db.main.userName
-db.main.password=Q6901j9W34YldOA</remarks>
-      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://172.20.56.97:3306?useUnicode=true&amp;characterEncoding=UTF-8&amp;allowMultiQueries=true</jdbc-url>
-    </data-source>
-    <data-source source="LOCAL" name="ys测试环境" uuid="06c98747-efc0-420d-82df-a93247c4b88f">
-      <driver-ref>mysql.8</driver-ref>
-      <synchronize>true</synchronize>
-      <remarks>db.meta.driver=com.mysql.jdbc.Driver
-db.meta.url
-db.meta.userName
-db.meta.password=Yonyou@1988</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://172.20.56.136:3306?useUnicode=true&amp;characterEncoding=UTF-8&amp;allowMultiQueries=true</jdbc-url>
     </data-source>
     <data-source source="LOCAL" name="营销云itg环境" uuid="365c6669-c4eb-492c-a27e-37b9f308d18d">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
-      <remarks>itg环境，稳定版本，零售开发部用的
-db.uimeta.driver=com.mysql.jdbc.Driver
-db.uimeta.url
-db.uimeta.userName
-db.uimeta.password=lsUPC@180806</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://10.16.3.72:3306?useUnicode=true&amp;characterEncoding=UTF-8&amp;allowMultiQueries=true&amp;useSSL=false</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="centOS6.5 MySQL主库" uuid="08a4642a-42bb-4254-be50-a67fb119268e">
+    <data-source source="LOCAL" name="CentOS6.5主库" uuid="08a4642a-42bb-4254-be50-a67fb119268e">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
-      <remarks>密码 1</remarks>
+      <remarks>MySQL</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://192.168.98.129:3306</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="centOS6.5 MySQL从库" uuid="68f63b64-394b-4a8c-b611-2f46a5c03b65">
+    <data-source source="LOCAL" name="CentOS6.5从库" uuid="68f63b64-394b-4a8c-b611-2f46a5c03b65">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
-      <remarks>密码 1</remarks>
+      <remarks>MySQL</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://192.168.98.128:3306</jdbc-url>
     </data-source>
@@ -57,24 +39,23 @@ db.uimeta.password=lsUPC@180806</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://rm-2zee8iu0if38u031z.mysql.rds.aliyuncs.com:3306</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="ys日常环境（新）" uuid="da585ba9-c5ae-4854-8d0e-0ab75233a518">
+    <data-source source="LOCAL" name="yonsuite日常" uuid="da585ba9-c5ae-4854-8d0e-0ab75233a518">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
+      <remarks>写库</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://172.20.47.57:8306</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="ys预发环境" uuid="2cd0ed7e-c5a3-47c7-b7c0-32402be61cd1">
+    <data-source source="LOCAL" name="yonsuite预发" uuid="2cd0ed7e-c5a3-47c7-b7c0-32402be61cd1">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
-      <remarks>ysdemo环境</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://rm-2zeff8189910d519x.mysql.rds.aliyuncs.com:3306/ugoods?useUnicode=true&amp;characterEncoding=UTF-8&amp;allowMultiQueries=true</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="ys生产环境" uuid="0d6c216e-e31b-4295-8408-a024b2de964c">
+    <data-source source="LOCAL" name="yonsuite生产" uuid="0d6c216e-e31b-4295-8408-a024b2de964c">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
-      <remarks>ys正式环境(推公有云)
-只读账号</remarks>
+      <remarks>只读</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://172.20.47.57:3354</jdbc-url>
     </data-source>

@@ -23,6 +23,14 @@ excel->sql脚本 执行 为0租户的
 # bill_base表 cBillNo相同 租户不同 id不同
 # 相同页面 每个租户的页面id不一样 编码cbillno一样
 # [billitem_base]
-# 表格中 列宽200
+# 表格中 列宽iColWidth 200 设置为1看不到
 # [bill_command]
 # action 为list 时 authid为 服务编码
+
+
+# [模板导出][导入]
+billitem_base cStyle提示
+有上下级关系的 billforeignkey表 配置 以解析导入信息
+
+
+UI  会先去找 领域元数据

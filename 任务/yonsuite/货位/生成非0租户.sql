@@ -1,8 +1,8 @@
 ##非0租户卡片 ##部分单据过滤基础表与过滤方案的编号与billnum不一致，单独处理
 ##风险提示，请执行后自行检查是否结果执行是否正确
-set @billno = 'aa_goodsproductscomparisonlist';
-set @filterName='aa_goodsproductscomparisonlist';
-set @solutionName='aa_goodsproductscomparisonlist';
+set @billno = 'aa_goodsposition';
+set @filterName='aa_goodsposition';
+set @solutionName='aa_goodsposition';
 set @tplmode=0;##部分单模版mode用2，要手工调整，为了处理默认模版的更新
 delete billentity_base from billentity_base inner join bill_base on billentity_base.iBillId=bill_base.id where bill_base.cBillNo=@billno and bill_base.tenant_id<>0;
 delete billtemplate_base from billtemplate_base inner join bill_base on billtemplate_base.iBillId=bill_base.id where bill_base.cBillNo=@billno and bill_base.tenant_id<>0;
