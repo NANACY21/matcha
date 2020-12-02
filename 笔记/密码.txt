@@ -56,7 +56,7 @@ MySQL连接信息
             developer@172.20.58.110
             yonyou@1988
             172.20.58.110：22 developer 1988@yonyou
-        日常环境（写库）
+        日常环境（读库）
             db.main.driver=com.mysql.jdbc.Driver
             db.main.url=jdbc:mysql://172.20.47.57:8306/ugoods?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&autoReconnect=true
             db.main.userName=ro_all_db

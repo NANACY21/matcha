@@ -639,3 +639,5 @@ from bill_toolbar where billnumber='aa_goodsposition';
 
 select *
 from aa_goodsposition where warehouseId=1984027502203136;
+
+

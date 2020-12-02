@@ -83,7 +83,7 @@
         <auth-type>PASSWORD</auth-type>
       </ssh-properties>
     </data-source>
-    <data-source name="yonsuite日常" uuid="da585ba9-c5ae-4854-8d0e-0ab75233a518">
+    <data-source name="yonsuite日常2" uuid="da585ba9-c5ae-4854-8d0e-0ab75233a518">
       <database-info product="MySQL" version="8.0.13" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.15 (Revision: 79a4336f140499bd22dd07f02b708e163844e3d5)" dbms="MYSQL" exact-version="8.0.13" exact-driver-version="8.0">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
@@ -163,6 +163,20 @@
       <schema-mapping>
         <introspection-scope>
           <node kind="schema" qname="ugoods" />
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="yonsuite日常1" uuid="f291edd6-847a-4cec-99bf-a85bed84e038">
+      <database-info product="MySQL" version="8.0.13" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.15 (Revision: 79a4336f140499bd22dd07f02b708e163844e3d5)" dbms="MYSQL" exact-version="8.0.13" exact-driver-version="8.0">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>ro_all_db</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="@" />
         </introspection-scope>
       </schema-mapping>
     </data-source>

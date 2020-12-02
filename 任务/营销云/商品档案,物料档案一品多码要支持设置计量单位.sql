@@ -6,8 +6,19 @@ where name = 'testa'
 
 
 select *
-from productBarCode
+from productBarCode WHERE tenant_id=1869389165678848
 where productId = 1839834338578688;
+
+SELECT name FROM
+product WHERE ID=1958741578944768;
+
+# [更新数据]
+update productbarcode bc inner join product p on bc.productId = p.id
+set bc.unitId=p.oUnit_id
+where bc.unitId is null
+  and p.oUnit_id is not null
+  and bc.cBarCode is not null ;
+
 
 
 # 没用

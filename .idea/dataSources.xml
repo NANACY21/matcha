@@ -39,10 +39,10 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://rm-2zee8iu0if38u031z.mysql.rds.aliyuncs.com:3306</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="yonsuite日常" uuid="da585ba9-c5ae-4854-8d0e-0ab75233a518">
+    <data-source source="LOCAL" name="yonsuite日常2" uuid="da585ba9-c5ae-4854-8d0e-0ab75233a518">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
-      <remarks>写库</remarks>
+      <remarks>读库</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://172.20.47.57:8306</jdbc-url>
     </data-source>
@@ -70,6 +70,13 @@
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://172.20.53.28:4466</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="yonsuite日常1" uuid="f291edd6-847a-4cec-99bf-a85bed84e038">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <remarks>读库</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://172.20.47.57:3383</jdbc-url>
     </data-source>
   </component>
 </project>

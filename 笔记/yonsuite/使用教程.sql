@@ -1,5 +1,7 @@
 # [物料]
 # 物料，相对于工厂即产品，相对于客户即商品
+# [相关领域元数据]productextend.xml/productnew.xml/productnew_complete.xml
+# [物料视图元数据]product.xml
 物料规格(规格档案) 规格值启用状态 影响2处：
 1.物料档案 选择 物料模板 后 出现sku页签中 有物料规格
 2.物料模板 中 物料规格

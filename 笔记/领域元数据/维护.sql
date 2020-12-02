@@ -1,3 +1,4 @@
+[维护领域元数据]
 u8cdev分支
     UStock\scripts\mysql\aa_product\DDL\aa_product_view_20200710_1.sql 视图sql 维护!
 u8c-pre-release分支
@@ -12,11 +13,28 @@ sql:导出ddl -> 加字段 -> 粘贴到文件里 -> 提交
 xml:日常 本地/元数据管理后台一致;
 
 
-视图:别用create/replace 用alter;
+视图:别用create/replace 用alter也不行;
 
 
-desc productapplyrangedetail;
-show create table productExtendView;->ddl
+desc productextendview;
+show create table productextendview;->ddl
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

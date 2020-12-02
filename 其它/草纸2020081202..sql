@@ -157,3 +157,14 @@ select *
 from user where mobile=17912341234;
 
 
+
+select *
+from apiuser;
+
+
+
+select *
+from pub_ref where code like '%goods%';
+aa.goodsposition.GoodsPosition
+aa.goodsposition.GoodsPosition
+aa.goodsposition.GoodsPosition

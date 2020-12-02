@@ -4,29 +4,21 @@
     <list default="true" id="9cae0b1d-fa9e-4477-9c04-b936e6df5af0" name="Default Changelist" comment="日常提交">
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/06c98747-efc0-420d-82df-a93247c4b88f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/06c98747-efc0-420d-82df-a93247c4b88f.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/06c98747-efc0-420d-82df-a93247c4b88f/storage_v2/_src_/schema/ugoods.AZiGzQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/06c98747-efc0-420d-82df-a93247c4b88f/storage_v2/_src_/schema/ugoods.AZiGzQ.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/06c98747-efc0-420d-82df-a93247c4b88f/storage_v2/_src_/schema/ustock.wfcxzg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/06c98747-efc0-420d-82df-a93247c4b88f/storage_v2/_src_/schema/ustock.wfcxzg.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0d6c216e-e31b-4295-8408-a024b2de964c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0d6c216e-e31b-4295-8408-a024b2de964c.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2cd0ed7e-c5a3-47c7-b7c0-32402be61cd1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2cd0ed7e-c5a3-47c7-b7c0-32402be61cd1.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6f78fd5e-1a2e-496b-b684-2227c162234e.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6f78fd5e-1a2e-496b-b684-2227c162234e/storage_v2/_src_/schema/information_schema.FNRwLQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6f78fd5e-1a2e-496b-b684-2227c162234e/storage_v2/_src_/schema/ugoods.AZiGzQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6f78fd5e-1a2e-496b-b684-2227c162234e/storage_v2/_src_/schema/ugoods.AZiGzQ.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/da585ba9-c5ae-4854-8d0e-0ab75233a518.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/da585ba9-c5ae-4854-8d0e-0ab75233a518.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/任务/yonsuite/维护领域元数据/product.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/任务/yonsuite/维护领域元数据/维护领域元数据.sql" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/维护领域元数据/维护领域元数据.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/CreateSQL.sql" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/货位/CreateSQL.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/新增[货位]菜单.sql" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/货位/新增[货位]菜单.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/生成非0租户.sql" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/货位/生成非0租户.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/货位树卡.xlsm" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/货位/货位树卡.xlsm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/货位物料对照列表.xlsm" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/货位/货位物料对照列表.xlsm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/任务/yonsuite/附件分组/附件分组-生成非0租户的sql.sql" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/任务/营销云/商品档案,物料档案一品多码要支持设置计量单位.sql" beforeDir="false" afterPath="$PROJECT_DIR$/任务/营销云/商品档案,物料档案一品多码要支持设置计量单位.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/其它/草纸2020081202..sql" beforeDir="false" afterPath="$PROJECT_DIR$/其它/草纸2020081202..sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/笔记/UI元数据/教程.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/UI元数据/教程.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/笔记/UI元数据/某页面.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/UI元数据/某页面.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/command.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/cmd.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/笔记/yonsuite/使用教程.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/yonsuite/使用教程.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/笔记/密码.txt" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/密码.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/错误排查 &amp; 出错记录.txt" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/错误排查 &amp; 出错记录.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +36,30 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="yonsuite日常2" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="yonsuite日常2" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="yonsuite日常2" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="ugoods: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="yonsuite日常2" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="ugoods: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="views" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="Git.Settings">
@@ -66,6 +81,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DBE.Init.BalloonShown" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="database.data.extractors.current.id" value="SQL Inserts" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -79,7 +95,26 @@
             <expand>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:yonsuite日常" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="root:yonsuite日常2" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:yonsuite日常2" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@4545a5b3" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:yonsuite日常2" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@26c1d77f" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:yonsuite日常1" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:yonsuite日常1" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@6dd4f68b" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
@@ -88,7 +123,11 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:yonsuite测试" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@6f55f301" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@5b3d9ba5" type="9fbbdea:ServiceModel$ServiceNode" />
+              </path>
+              <path>
+                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+                <item name="root:yonsuite预发" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               </path>
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
@@ -97,7 +136,7 @@
               <path>
                 <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
                 <item name="root:营销云itg环境" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-                <item name="com.intellij.database.console.session.MessageBusSession@1d6e428e" type="9fbbdea:ServiceModel$ServiceNode" />
+                <item name="com.intellij.database.console.session.MessageBusSession@5a3e9d84" type="9fbbdea:ServiceModel$ServiceNode" />
               </path>
             </expand>
             <select />
@@ -115,42 +154,42 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="617" y="219" key="#Console/0.0.2048.1112@0.0.2048.1112" timestamp="1605011788763" />
-    <state x="886" y="400" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606825367719">
+    <state x="658" y="254" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606890636541">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="886" y="400" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1606825367719" />
-    <state x="677" y="151" key="CommitChangelistDialog2" timestamp="1606703781230">
+    <state x="658" y="254" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1606890636541" />
+    <state x="677" y="151" key="CommitChangelistDialog2" timestamp="1606902141075">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="677" y="151" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1606703781230" />
+    <state x="677" y="151" key="CommitChangelistDialog2/0.0.2048.1112@0.0.2048.1112" timestamp="1606902141075" />
     <state x="198" y="100" width="1638" height="905" key="DiffContextDialog" timestamp="1606711668349">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="198" y="100" width="1638" height="905" key="DiffContextDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1606711668349" />
-    <state width="1760" height="246" key="GridCell.Tab.0.bottom" timestamp="1606825474755">
+    <state width="1760" height="408" key="GridCell.Tab.0.bottom" timestamp="1606902023594">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1760" height="246" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1606825474755" />
-    <state width="1760" height="246" key="GridCell.Tab.0.center" timestamp="1606825474754">
+    <state width="1760" height="408" key="GridCell.Tab.0.bottom/0.0.2048.1112@0.0.2048.1112" timestamp="1606902023594" />
+    <state width="1760" height="408" key="GridCell.Tab.0.center" timestamp="1606902023594">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1760" height="246" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1606825474754" />
-    <state width="1760" height="246" key="GridCell.Tab.0.left" timestamp="1606825474754">
+    <state width="1760" height="408" key="GridCell.Tab.0.center/0.0.2048.1112@0.0.2048.1112" timestamp="1606902023594" />
+    <state width="1760" height="408" key="GridCell.Tab.0.left" timestamp="1606902023594">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1760" height="246" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1606825474754" />
-    <state width="1760" height="246" key="GridCell.Tab.0.right" timestamp="1606825474755">
+    <state width="1760" height="408" key="GridCell.Tab.0.left/0.0.2048.1112@0.0.2048.1112" timestamp="1606902023594" />
+    <state width="1760" height="408" key="GridCell.Tab.0.right" timestamp="1606902023594">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1760" height="246" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1606825474755" />
+    <state width="1760" height="408" key="GridCell.Tab.0.right/0.0.2048.1112@0.0.2048.1112" timestamp="1606902023594" />
     <state x="93" y="93" width="1862" height="926" key="VCS.FileHistoryDialog" timestamp="1606711668349">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="93" y="93" width="1862" height="926" key="VCS.FileHistoryDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1606711668349" />
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1606395682654">
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2" timestamp="1606825559677">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1606395682654" />
+    <state x="617" y="294" key="Vcs.Push.Dialog.v2/0.0.2048.1112@0.0.2048.1112" timestamp="1606825559677" />
     <state x="755" y="366" key="com.intellij.database.dbimport.ImportUtil.MyDialog" timestamp="1606804001367">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -163,18 +202,18 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="93" y="93" width="1862" height="926" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1606711668349" />
-    <state x="717" y="386" key="com.intellij.ide.util.TipDialog" timestamp="1606787087182">
+    <state x="717" y="386" key="com.intellij.ide.util.TipDialog" timestamp="1606873124567">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="717" y="386" key="com.intellij.ide.util.TipDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1606787087182" />
+    <state x="717" y="386" key="com.intellij.ide.util.TipDialog/0.0.2048.1112@0.0.2048.1112" timestamp="1606873124567" />
     <state x="713" y="311" width="1168" height="490" key="find.popup" timestamp="1606717157785">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="713" y="311" width="1168" height="490" key="find.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1606717157785" />
-    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup" timestamp="1606823629403">
+    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup" timestamp="1606898028322">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1606823629403" />
+    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup/0.0.2048.1112@0.0.2048.1112" timestamp="1606898028322" />
     <state x="747" y="475" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1606101706667">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>

@@ -34,3 +34,4 @@ billitem_base cStyle提示
 
 
 UI  会先去找 领域元数据
+生成非0租户/某页面 这俩文件重要!
