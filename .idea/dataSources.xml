@@ -39,10 +39,10 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://rm-2zee8iu0if38u031z.mysql.rds.aliyuncs.com:3306</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="yonsuite日常2" uuid="da585ba9-c5ae-4854-8d0e-0ab75233a518">
+    <data-source source="LOCAL" name="yonsuite日常ok" uuid="da585ba9-c5ae-4854-8d0e-0ab75233a518">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
-      <remarks>读库</remarks>
+      <remarks>读库，这个库都能查到了-&gt;同步ok</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://172.20.47.57:8306</jdbc-url>
     </data-source>
@@ -50,7 +50,7 @@
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://rm-2zeff8189910d519x.mysql.rds.aliyuncs.com:3306/ugoods?useUnicode=true&amp;characterEncoding=UTF-8&amp;allowMultiQueries=true</jdbc-url>
+      <jdbc-url>jdbc:mysql://172.20.47.57:3373/ugoods?useUnicode=true&amp;characterEncoding=UTF-8&amp;allowMultiQueries=true</jdbc-url>
     </data-source>
     <data-source source="LOCAL" name="yonsuite生产" uuid="0d6c216e-e31b-4295-8408-a024b2de964c">
       <driver-ref>mysql.8</driver-ref>
@@ -71,12 +71,20 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://172.20.53.28:4466</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="yonsuite日常1" uuid="f291edd6-847a-4cec-99bf-a85bed84e038">
+    <data-source source="LOCAL" name="yonsuite日常" uuid="f291edd6-847a-4cec-99bf-a85bed84e038">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <remarks>读库</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://172.20.47.57:3383</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="yonsuite沙箱" uuid="4a842319-f83c-49ae-b2c4-106e393e9bba">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <remarks>只读帐号</remarks>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://7fec1cb3c69443d5a070cbe447b8a9bbin01.internal.cn-north-4.mysql.rds.myhuaweicloud.com:3306</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>
 </project>

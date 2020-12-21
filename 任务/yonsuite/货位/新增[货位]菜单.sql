@@ -487,12 +487,14 @@ from tenant where not exists(select 1 from billruleregister where billnum='aa_go
 desc aa_warehouse;
 # [快速定义]
 select *
-from billforeignkey WHERE entityname='GoodsPosition';
+from billforeignkey WHERE billno='aa_goodsposition';
 
+# /bill/save用的 已废弃 删除该行元组!
+delete from billforeignkey where entityname='GoodsPosition' and billno='aa_goodsposition' and sourceattr='erpCode';
 INSERT INTO billforeignkey (type, entityname, billno, source, sourceattr, target, extra, extraTarget,
                                    extra_condition, tenant_id, sort)
-select 0, 'GoodsPosition', 'aa_goodsposition', 'parent_name', 'erpCode', 'parent', null, null, null, null, 0
-from tenant where not exists(select 1 from billforeignkey where entityname='GoodsPosition' and billno='aa_goodsposition') limit 1;
+select 1, 'GoodsPosition', 'aa_goodsposition', 'parent_name', 'erpCode', 'parent', null, null, null, null, 0
+from tenant where not exists(select 1 from billforeignkey where entityname='GoodsPosition' and billno='aa_goodsposition' and sourceattr='erpCode') limit 1;
 
 
 INSERT INTO billforeignkey (type, entityname, billno, source, sourceattr, target, extra, extraTarget,
@@ -504,6 +506,12 @@ INSERT INTO billforeignkey (type, entityname, billno, source, sourceattr, target
                                    extra_condition, tenant_id, sort)
 select 0, 'GoodsPosition', 'aa_goodsposition', 'parent_name', 'code', 'parent', null, null, null, null, 0
 from tenant where not exists(select 1 from billforeignkey where entityname='GoodsPosition' and billno='aa_goodsposition' and source='parent_name' and sourceattr='code') limit 1;
+
+# 更新导入
+INSERT INTO billforeignkey (type, entityname, billno, source, sourceattr, target, extra, extraTarget,
+                                   extra_condition, tenant_id, sort)
+select 0, 'GoodsPosition', 'aa_goodsposition', 'code', 'code', 'id', null, null, null, null, 0
+from tenant where not exists(select 1 from billforeignkey where entityname='GoodsPosition' and billno='aa_goodsposition' and source='code' and sourceattr='code' and target='id') limit 1;
 
 
 # 线索树！！！
