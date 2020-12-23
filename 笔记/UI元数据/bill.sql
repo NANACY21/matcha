@@ -4,7 +4,7 @@
 # 查询excel所有数据 注意 filterName/billno不一定相等
 set @billNo = 'aa_goodsposition';
 set @filterName = 'aa_goodsposition';
-set @tenantId = 0;
+set @tenantId = 1849710349897984;
 select id into @billid from bill_base where cBillNo = @billNo and tenant_id = @tenantId;
 select * from bill_base where id = @billid;
 select * from billentity_base where ibillid = @billid and tenant_id = @tenantId;
@@ -22,3 +22,4 @@ select * from pb_filter_solution_common where solutionId = @solutionId and tenan
 select * from bill_toolbar where billnumber = @billNo and tenant_id = @tenantId;
 select * from bill_toolbaritem where billnumber = @billNo and tenant_id = @tenantId ORDER BY `order`;
 select * from bill_command where billnumber = @billNo and tenant_id = @tenantId;
+

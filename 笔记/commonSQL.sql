@@ -1,5 +1,5 @@
 # 常用SQL语句
-select id from tenant where alias = 'x30fk78m';
+select id from tenant where alias = 'lzu07egu';
 
 select tenant_id from bill_base where id = 1001041213;
 

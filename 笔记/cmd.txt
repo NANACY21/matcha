@@ -6,7 +6,7 @@ cb.rest.AppContext.productcenter.tenant.id
 
 ps -ef | grep web
 
-tail -f ucf-productcenter.log | grep -C10  '1969673018085632'
+tail -f ucf-productcenter.log | grep -C10  'from aa_warehouse'
 
 tail -f ucf-productcenter.log
 
@@ -46,3 +46,4 @@ ynpm update
 [操作]
 1.将文件夹下的 node_modules 目录内容清空（每次包更新，需要先将node_modules目录内容清空）
 2.删除package-lock.json
+

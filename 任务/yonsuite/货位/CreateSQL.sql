@@ -234,7 +234,7 @@ insert into bill_toolbaritem(`id`,`billnumber`,`toolbar`,`name`,`command`,`type`
 select ifnull(max(id),0)+1 into @id166 from bill_toolbaritem;
 insert into bill_toolbaritem(`id`,`billnumber`,`toolbar`,`name`,`command`,`type`,`style`,`text`,`parameter`,`imgsrc`,`parent`,`order`,`subid`,`system`,`authid`,`authcontrol`,`authname`,`bMerge`,`icon`) values (@id166,'aa_goodsposition','aa_goodspositiontop','btnDelete','cmdDelete','button',0,'删除',null,null,null,3,'AA',1,'aa_goodspositiondelete',1,null,1,'delete');
 set @id167=@id166+1;
-insert into bill_toolbaritem(`id`,`billnumber`,`toolbar`,`name`,`command`,`type`,`style`,`text`,`parameter`,`imgsrc`,`parent`,`order`,`subid`,`system`,`authid`,`authcontrol`,`authname`,`bMerge`,`icon`) values (@id167,'aa_goodsposition','aa_goodspositiontop','btnEdit','cmdEdit','button',0,'修改',null,null,null,4,'AA',1,'aa_goodspositionedit',1,null,1,'edit');
+insert into bill_toolbaritem(`id`,`billnumber`,`toolbar`,`name`,`command`,`type`,`style`,`text`,`parameter`,`imgsrc`,`parent`,`order`,`subid`,`system`,`authid`,`authcontrol`,`authname`,`bMerge`,`icon`) values (@id167,'aa_goodsposition','aa_goodspositiontop','btnEdit','cmdEdit','button',0,'修改',null,null,null,4,'AA',1,'aa_goodsposition',1,null,1,'edit');
 set @id168=@id167+1;
 insert into bill_toolbaritem(`id`,`billnumber`,`toolbar`,`name`,`command`,`type`,`style`,`text`,`parameter`,`imgsrc`,`parent`,`order`,`subid`,`system`,`authid`,`authcontrol`,`authname`,`bMerge`,`icon`) values (@id168,'aa_goodsposition','aa_goodspositiontop','btndropdown',null,'dropdownbutton',0,'导入',null,null,null,5,'AA',1,'aa_goodspositionedit',1,null,1,null);
 set @id169=@id168+1;
@@ -253,7 +253,7 @@ insert into bill_command(`id`,`name`,`action`,`billnumber`,`target`,`ruleid`,`sv
 set @id180=@id179+1;
 insert into bill_command(`id`,`name`,`action`,`billnumber`,`target`,`ruleid`,`svcurl`,`httpmethod`,`subid`,`system`,`parameter`,`authid`) values (@id180,'cmdDelete','delete','aa_goodsposition',null,null,'/bill/delete','POST','AA',1,null,'aa_goodspositiondelete');
 set @id181=@id180+1;
-insert into bill_command(`id`,`name`,`action`,`billnumber`,`target`,`ruleid`,`svcurl`,`httpmethod`,`subid`,`system`,`parameter`,`authid`) values (@id181,'cmdEdit','detail','aa_goodsposition',null,null,'/bill/detail','POST','AA',1,null,'aa_goodspositionedit');
+insert into bill_command(`id`,`name`,`action`,`billnumber`,`target`,`ruleid`,`svcurl`,`httpmethod`,`subid`,`system`,`parameter`,`authid`) values (@id181,'cmdEdit','detail','aa_goodsposition',null,null,'/bill/detail','POST','AA',1,null,'aa_goodsposition');
 set @id182=@id181+1;
 insert into bill_command(`id`,`name`,`action`,`billnumber`,`target`,`ruleid`,`svcurl`,`httpmethod`,`subid`,`system`,`parameter`,`authid`) values (@id182,'cmdTempexport','tempexport','aa_goodsposition',null,null,'/billtemp/export','POST','AA',1,null,'aa_goodspositionedit');
 set @id183=@id182+1;
@@ -271,6 +271,6 @@ insert into bill_command(`id`,`name`,`action`,`billnumber`,`target`,`ruleid`,`sv
 set @id189=@id188+1;
 insert into bill_command(`id`,`name`,`action`,`billnumber`,`target`,`ruleid`,`svcurl`,`httpmethod`,`subid`,`system`,`parameter`,`authid`) values (@id189,'cmdCheck_code','check','aa_goodsposition',null,null,'/bill/check','POST','AA',1,null,null);
 set @id190=@id189+1;
-insert into bill_command(`id`,`name`,`action`,`billnumber`,`target`,`ruleid`,`svcurl`,`httpmethod`,`subid`,`system`,`parameter`,`authid`) values (@id190,'cmdDetail','detail','aa_goodsposition',null,null,'/bill/detail.do','GET','AA',1,null,null);
+insert into bill_command(`id`,`name`,`action`,`billnumber`,`target`,`ruleid`,`svcurl`,`httpmethod`,`subid`,`system`,`parameter`,`authid`) values (@id190,'cmdDetail','detail','aa_goodsposition',null,null,'/bill/detail.do','GET','AA',1,null,'aa_goodsposition');
 
 update bill_base set `iDefTplId`=@id14 where `id`=@id4;

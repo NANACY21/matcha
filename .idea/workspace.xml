@@ -5,43 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9cae0b1d-fa9e-4477-9c04-b936e6df5af0" name="Default Changelist" comment="日常提交">
-      <change afterPath="$PROJECT_DIR$/其它/caozhi1.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/笔记/cmd.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/笔记/commonSQL.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/06c98747-efc0-420d-82df-a93247c4b88f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/06c98747-efc0-420d-82df-a93247c4b88f.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/06c98747-efc0-420d-82df-a93247c4b88f/storage_v2/_src_/schema/ugoods.AZiGzQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/06c98747-efc0-420d-82df-a93247c4b88f/storage_v2/_src_/schema/ugoods.AZiGzQ.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2cd0ed7e-c5a3-47c7-b7c0-32402be61cd1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2cd0ed7e-c5a3-47c7-b7c0-32402be61cd1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/2cd0ed7e-c5a3-47c7-b7c0-32402be61cd1/storage_v2/_src_/schema/ugoods.AZiGzQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/2cd0ed7e-c5a3-47c7-b7c0-32402be61cd1/storage_v2/_src_/schema/ugoods.AZiGzQ.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/365c6669-c4eb-492c-a27e-37b9f308d18d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/365c6669-c4eb-492c-a27e-37b9f308d18d.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/365c6669-c4eb-492c-a27e-37b9f308d18d/storage_v2/_src_/schema/ugoods.AZiGzQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/365c6669-c4eb-492c-a27e-37b9f308d18d/storage_v2/_src_/schema/ugoods.AZiGzQ.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/365c6669-c4eb-492c-a27e-37b9f308d18d/storage_v2/_src_/schema/uretaildata.YlnMKg.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/365c6669-c4eb-492c-a27e-37b9f308d18d/storage_v2/_src_/schema/uretaildata.YlnMKg.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/da585ba9-c5ae-4854-8d0e-0ab75233a518.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/da585ba9-c5ae-4854-8d0e-0ab75233a518.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/CreateSQL.sql" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/货位/CreateSQL.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/建表 货位表.sql" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/货位/建表 货位表.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/新增[货位]菜单.sql" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/货位/新增[货位]菜单.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/货位树卡.xlsm" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/货位/货位树卡.xlsm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/任务/yonsuite/附件分组/附件分组列表.xlsm" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/附件分组/附件分组列表.xlsm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/任务/营销云/商品档案,物料档案一品多码要支持设置计量单位.sql" beforeDir="false" afterPath="$PROJECT_DIR$/任务/营销云/商品档案,物料档案一品多码要支持设置计量单位.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/其它/11.sql" beforeDir="false" afterPath="$PROJECT_DIR$/其它/caozhi4.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/其它/202007物料属性个数.sql" beforeDir="false" afterPath="$PROJECT_DIR$/其它/caozhi5.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/其它/草纸.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/其它/草纸0815.sql" beforeDir="false" afterPath="$PROJECT_DIR$/其它/caozhi2.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/其它/草纸20200812.sql" beforeDir="false" afterPath="$PROJECT_DIR$/其它/caozhi3.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/其它/草纸2020081202..sql" beforeDir="false" afterPath="$PROJECT_DIR$/其它/caozhi6.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/Git/git操作.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/git/doc.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/UI元数据/教程.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/UI元数据/doc.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/UI元数据/某页面.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/UI元数据/bill.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/cmd.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/yonsuite/使用教程.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/yonsuite/doc.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/前端启动命令.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/密码.txt" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/password.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/开发步骤.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/devstep.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/营销云/使用教程.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/营销云/doc.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/错误排查 &amp; 出错记录.txt" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/error.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/领域元数据/定位xml元数据.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/领域元数据/doc.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/其它/caozhi5.sql" beforeDir="false" afterPath="$PROJECT_DIR$/其它/caozhi5.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/其它/caozhi6.sql" beforeDir="false" afterPath="$PROJECT_DIR$/其它/caozhi6.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/UI元数据/[过滤]相关.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/UI元数据/过滤.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/UI元数据/bill.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/UI元数据/bill.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/cmd.txt" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/cmd.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/commonSQL.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/commonSQL.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/yonsuite/doc.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/yonsuite/doc.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/营销云/3U功能.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/营销云/doc.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/营销云/doc.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/营销云/itg 预发 区别.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/营销云/基础服务业务.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/领域元数据/doc.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/领域元数据/doc.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/领域元数据/维护.sql" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +65,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="database.data.extractors.current.id" value="SQL Inserts" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">

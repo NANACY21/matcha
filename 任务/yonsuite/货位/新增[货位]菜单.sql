@@ -623,7 +623,7 @@ from auth where code like '%aa_goods%';
 # [需求]
 货位物料对照列表 上方查询区问题 112 116
 
-
+获取当前登录用户组织权限时 billcommand action必须有list detail的 对应authid为服务编码
  SELECT a.authid
 from bill_command a
 where billnumber=#{billnumber} and tenant_id=#{tenant_Id}

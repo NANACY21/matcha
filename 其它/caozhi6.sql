@@ -131,3 +131,13 @@ where billnumber='aa_goodsposition' and name ='cmdImport';
 update bill_toolbaritem item1 inner join bill_toolbaritem item2 on item1.tenant_id=item2.tenant_id
 set item1.parent=item2.id
 where item1.billnumber='aa_goodsposition' and item1.type='menuitem' and item2.type='dropdownbutton' and item2.billnumber='aa_goodsposition';
+
+
+
+前端地址
+后端地址 寻找方式：前端项目的package.json中的SER_URL配置
+数据库 流水线的配置文件
+redis
+linux
+zookeeper
+dubbo
