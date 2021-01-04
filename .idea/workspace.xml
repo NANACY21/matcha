@@ -5,16 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9cae0b1d-fa9e-4477-9c04-b936e6df5af0" name="Default Changelist" comment="日常提交">
-      <change afterPath="$PROJECT_DIR$/笔记/bill/2020/09.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/笔记/bill/2020/10.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/笔记/bill/2020/11.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/笔记/bill/2020/12.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/货位物料对照列表.xlsm" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/货位/货位物料对照列表.xlsm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/CreateSQL.sql" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/货位/CreateSQL.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/生成非0租户.sql" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/货位/生成非0租户.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/货位树卡.xlsm" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/货位/货位树卡.xlsm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/其它/caozhi1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/其它/caozhi1.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/其它/caozhi6.sql" beforeDir="false" afterPath="$PROJECT_DIR$/其它/caozhi6.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/UI元数据/bill.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/UI元数据/bill.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/yonsuite/doc.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/yonsuite/doc.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/bill/2020/12.txt" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/bill/2020/12.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/cmd.txt" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/cmd.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/commonSQL.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/commonSQL.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/error.txt" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/error.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/领域元数据/doc.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/领域元数据/doc.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +39,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/NANACY21/matcha" />
+      </set>
+    </option>
+  </component>
   <component name="IgnoredFileRootStore">
     <option name="generatedRoots">
       <set>
@@ -58,7 +66,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="database.data.extractors.current.id" value="SQL Inserts" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -75,6 +83,7 @@
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="日常提交 账单" />
     <MESSAGE value="日常提交" />
     <option name="LAST_COMMIT_MESSAGE" value="日常提交" />
   </component>

@@ -142,7 +142,19 @@ linux
 zookeeper
 dubbo
 
+select u.yxyuserid
+from user u
+         inner join productapplyrange r on u.iShopID=r.shopId
+where r.shopId is not null;
+select * from productapplyrange where shopId=4;
 
-desc  productextendview;
+select iShopID
+from user where user_type=4 and yxyuserid='75c53303f2b94985963735919cb6b905';
 
 
+
+select yxyuserid,iShopID,tenant_id
+from user where user_type=4 and  yxyuserid='700b8c148bbd40648498f0f799ae649a';
+
+select *
+from billruleregister where tenant_id='731215278067968' and action='delete' and billnum='aa_userlist' order by iorder ;
