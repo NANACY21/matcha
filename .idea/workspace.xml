@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cae0b1d-fa9e-4477-9c04-b936e6df5af0" name="Default Changelist" comment="日常提交">
+    <list default="true" id="9cae0b1d-fa9e-4477-9c04-b936e6df5af0" name="Default Changelist" comment="日常提交 2020结束啦">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/CreateSQL.sql" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/货位/CreateSQL.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/生成非0租户.sql" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/货位/生成非0租户.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/货位树卡.xlsm" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/货位/货位树卡.xlsm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/其它/caozhi1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/其它/caozhi1.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/其它/caozhi6.sql" beforeDir="false" afterPath="$PROJECT_DIR$/其它/caozhi6.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/bill/2020/12.txt" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/bill/2020/12.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/cmd.txt" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/cmd.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/commonSQL.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/commonSQL.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/error.txt" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/error.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/领域元数据/doc.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/领域元数据/doc.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/bill/2020/09.txt" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/bill/2020/202009.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +76,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="日常提交 账单" />
     <MESSAGE value="日常提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="日常提交" />
+    <MESSAGE value="日常提交 2020结束啦" />
+    <option name="LAST_COMMIT_MESSAGE" value="日常提交 2020结束啦" />
   </component>
 </project>
