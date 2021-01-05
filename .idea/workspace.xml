@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cae0b1d-fa9e-4477-9c04-b936e6df5af0" name="Default Changelist" comment="日常提交 2020结束啦">
-      <change afterPath="$PROJECT_DIR$/任务/yonsuite/物料模板/物料模板 周期购.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/货位树卡.xlsm" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/货位/货位树卡.xlsm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/UI元数据/bill.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/UI元数据/bill.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/bill/2021/202101.txt" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/bill/2021/202101.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/commonSQL.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/commonSQL.sql" afterDir="false" />
-    </list>
+    <list default="true" id="9cae0b1d-fa9e-4477-9c04-b936e6df5af0" name="Default Changelist" comment="日常提交" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,8 +73,8 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="VcsManagerConfiguration">
     <MESSAGE value="日常提交 账单" />
-    <MESSAGE value="日常提交" />
     <MESSAGE value="日常提交 2020结束啦" />
-    <option name="LAST_COMMIT_MESSAGE" value="日常提交 2020结束啦" />
+    <MESSAGE value="日常提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="日常提交" />
   </component>
 </project>
