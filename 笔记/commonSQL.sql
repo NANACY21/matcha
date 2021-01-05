@@ -12,7 +12,7 @@ select yxyuserid
 from user where user_type = 4 and yxyuserid = '75c53303f2b94985963735919cb6b905';
 
 select *
-from billforeignkey WHERE entityname = 'Department';
+from billforeignkey WHERE entityname = 'GoodsPosition';
 
 select *
 from pub_ref where code like '%goods%';
