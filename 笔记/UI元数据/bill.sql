@@ -2,8 +2,8 @@
 # [tenant]1292161350684928/1838010622546176/1347014292918528
 # [billno]aa_goodsproductscomparisonlist/aa_goodsproductscomparison_position
 # 查询excel所有数据 注意 filterName/billno不一定相等
-set @billNo = 'pc_producttpl';
-set @filterName = 'pc_producttpl';
+set @billNo = 'aa_goodsposition';
+set @filterName = 'aa_goodsposition';
 set @tenantId = 0;
 select id into @billid from bill_base where cBillNo = @billNo and tenant_id = @tenantId;
 select * from bill_base where id = @billid;

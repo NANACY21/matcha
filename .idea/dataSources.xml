@@ -13,23 +13,21 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://172.20.56.136:3306?useUnicode=true&amp;characterEncoding=UTF-8&amp;allowMultiQueries=true</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="营销云itg环境" uuid="365c6669-c4eb-492c-a27e-37b9f308d18d">
+    <data-source source="LOCAL" name="可分可合环境C 专属云" uuid="365c6669-c4eb-492c-a27e-37b9f308d18d">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://10.16.3.72:3306?useUnicode=true&amp;characterEncoding=UTF-8&amp;allowMultiQueries=true&amp;useSSL=false</jdbc-url>
+      <jdbc-url>jdbc:mysql://172.20.58.68:3306?useUnicode=true&amp;characterEncoding=UTF-8&amp;allowMultiQueries=true&amp;useSSL=false</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="CentOS6.5主库" uuid="08a4642a-42bb-4254-be50-a67fb119268e">
+    <data-source source="LOCAL" name="centos6.5 mysql主库" uuid="08a4642a-42bb-4254-be50-a67fb119268e">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
-      <remarks>MySQL</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://192.168.98.129:3306</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="CentOS6.5从库" uuid="68f63b64-394b-4a8c-b611-2f46a5c03b65">
+    <data-source source="LOCAL" name="centos6.5 mysql从库" uuid="68f63b64-394b-4a8c-b611-2f46a5c03b65">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
-      <remarks>MySQL</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://192.168.98.128:3306</jdbc-url>
     </data-source>
@@ -39,10 +37,9 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://rm-2zee8iu0if38u031z.mysql.rds.aliyuncs.com:3306</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="yonsuite日常ok" uuid="da585ba9-c5ae-4854-8d0e-0ab75233a518">
+    <data-source source="LOCAL" name="yonsuite日常ok 读库" uuid="da585ba9-c5ae-4854-8d0e-0ab75233a518">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
-      <remarks>读库，这个库都能查到了-&gt;同步ok</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://172.20.47.57:8306</jdbc-url>
     </data-source>
@@ -52,10 +49,9 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://172.20.47.57:3373/ugoods?useUnicode=true&amp;characterEncoding=UTF-8&amp;allowMultiQueries=true</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="yonsuite生产" uuid="0d6c216e-e31b-4295-8408-a024b2de964c">
+    <data-source source="LOCAL" name="yonsuite生产 读库" uuid="0d6c216e-e31b-4295-8408-a024b2de964c">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
-      <remarks>只读</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://172.20.47.57:3354</jdbc-url>
     </data-source>
@@ -71,19 +67,45 @@
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://172.20.53.28:4466</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="yonsuite日常" uuid="f291edd6-847a-4cec-99bf-a85bed84e038">
+    <data-source source="LOCAL" name="yonsuite日常 读库" uuid="f291edd6-847a-4cec-99bf-a85bed84e038">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
-      <remarks>读库</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
       <jdbc-url>jdbc:mysql://172.20.47.57:3383</jdbc-url>
     </data-source>
-    <data-source source="LOCAL" name="yonsuite沙箱" uuid="4a842319-f83c-49ae-b2c4-106e393e9bba">
+    <data-source source="LOCAL" name="yonsuite沙箱 读库" uuid="4a842319-f83c-49ae-b2c4-106e393e9bba">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
-      <remarks>只读帐号</remarks>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://7fec1cb3c69443d5a070cbe447b8a9bbin01.internal.cn-north-4.mysql.rds.myhuaweicloud.com:3306</jdbc-url>
+      <jdbc-url>jdbc:mysql://172.20.47.57:7002</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="可分可合环境A 专属云" uuid="cba95b3b-ce74-42e9-9b7e-92f5a28da37a">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://172.20.45.169:3306</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="可分可合环境B 专属云" uuid="48447dc2-0829-4efd-bdca-d1254350be72">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://172.20.50.156:3306</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="营销云itg环境" uuid="6008375d-478e-4720-b800-652e59d1724d">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://10.16.3.72:3306</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+    <data-source source="LOCAL" name="九院mongodb" uuid="4f1f4933-14a8-4d34-b4c7-6c654a16e930">
+      <driver-ref>mongo</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.dbschema.MongoJdbcDriver</jdbc-driver>
+      <jdbc-url>mongodb://172.20.53.249:30020</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
   </component>

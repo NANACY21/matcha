@@ -6,7 +6,7 @@ cb.rest.AppContext.productcenter.tenant.id
 
 ps -ef | grep web
 
-tail -f ucf-productcenter.log | grep -C10  '执行saveGoodsPositionBeforeRule规则'
+tail -f ucf-productcenter.log | grep -C10  'ThreadName'
 
 tail -f ucf-productcenter.log
 

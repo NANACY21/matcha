@@ -4,7 +4,41 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cae0b1d-fa9e-4477-9c04-b936e6df5af0" name="Default Changelist" comment="日常提交" />
+    <list default="true" id="9cae0b1d-fa9e-4477-9c04-b936e6df5af0" name="Default Changelist" comment="日常提交">
+      <change afterPath="$PROJECT_DIR$/其它/caozhi7.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/其它/caozhi8.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/笔记/bill/2021/202102.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0d6c216e-e31b-4295-8408-a024b2de964c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0d6c216e-e31b-4295-8408-a024b2de964c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/365c6669-c4eb-492c-a27e-37b9f308d18d.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/365c6669-c4eb-492c-a27e-37b9f308d18d.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/365c6669-c4eb-492c-a27e-37b9f308d18d/storage_v2/_src_/schema/ugoods.AZiGzQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/365c6669-c4eb-492c-a27e-37b9f308d18d/storage_v2/_src_/schema/ugoods.AZiGzQ.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/365c6669-c4eb-492c-a27e-37b9f308d18d/storage_v2/_src_/schema/uretaildata.YlnMKg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/365c6669-c4eb-492c-a27e-37b9f308d18d/storage_v2/_src_/schema/uretaildata.YlnMKg.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/afcac237-de5f-4331-abc3-4da8cd1483d3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/afcac237-de5f-4331-abc3-4da8cd1483d3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/afcac237-de5f-4331-abc3-4da8cd1483d3/storage_v2/_src_/schema/ugoods.AZiGzQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/afcac237-de5f-4331-abc3-4da8cd1483d3/storage_v2/_src_/schema/ugoods.AZiGzQ.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/da585ba9-c5ae-4854-8d0e-0ab75233a518.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/da585ba9-c5ae-4854-8d0e-0ab75233a518.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/任务/yonsuite/物料模板/物料模板 周期购.sql" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/物料模板/物料模板 周期购.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/CreateSQL.sql" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/货位/CreateSQL.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/生成非0租户.sql" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/货位/生成非0租户.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/货位参照.xlsm" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/货位/货位参照.xlsm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/货位树卡.xlsm" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/货位/货位树卡.xlsm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/任务/yonsuite/货位/货位物料对照列表.xlsm" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/货位/货位物料对照列表.xlsm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/其它/caozhi1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/其它/caozhi1.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/其它/caozhi2.sql" beforeDir="false" afterPath="$PROJECT_DIR$/其它/caozhi2.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/其它/caozhi3.sql" beforeDir="false" afterPath="$PROJECT_DIR$/其它/caozhi3.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/其它/caozhi4.sql" beforeDir="false" afterPath="$PROJECT_DIR$/其它/caozhi4.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/其它/caozhi5.sql" beforeDir="false" afterPath="$PROJECT_DIR$/其它/caozhi5.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/其它/caozhi6.sql" beforeDir="false" afterPath="$PROJECT_DIR$/其它/caozhi6.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/UI元数据/bill.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/UI元数据/bill.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/bill/2021/202101.txt" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/bill/2021/202101.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/cmd.txt" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/cmd.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/commonSQL.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/commonSQL.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/password.txt" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/password.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/yonsuite/doc.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/yonsuite/doc.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/笔记/领域元数据/doc.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/领域元数据/doc.sql" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,12 +83,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DBE.Init.BalloonShown" value="true" />
-    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DatabaseDriversLRU" value="mysql&#10;mongo" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="database.data.extractors.current.export.id" value="SQL Inserts" />
-    <property name="database.data.extractors.current.id" value="SQL Updates" />
+    <property name="database.data.extractors.current.id" value="SQL Inserts" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="service.view.auto.scroll.to.source" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="ServiceViewManager">

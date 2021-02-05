@@ -52,7 +52,17 @@ xml:日常 本地/元数据管理后台一致;
 
 
 desc productextendview;
-show create table productview;->ddl
+DDL：
+show create table shopproductview;
+show create table productExtendView;
+
+desc shopproductview
+desc productExtendView;
+
+
+
+
+
 
 
 

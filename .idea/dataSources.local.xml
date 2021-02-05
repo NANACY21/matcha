@@ -16,7 +16,7 @@
       </schema-mapping>
     </data-source>
     <data-source name="yonsuite测试" uuid="06c98747-efc0-420d-82df-a93247c4b88f">
-      <database-info product="MySQL" version="5.7.20-log" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.21 (Revision: 33f65445a1bcc544eb0120491926484da168f199)" dbms="MYSQL" exact-version="5.7.20" exact-driver-version="8.0">
+      <database-info product="MySQL" version="5.7.27-log" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.21 (Revision: 33f65445a1bcc544eb0120491926484da168f199)" dbms="MYSQL" exact-version="5.7.27" exact-driver-version="8.0">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
       </database-info>
@@ -32,14 +32,14 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
-    <data-source name="营销云itg环境" uuid="365c6669-c4eb-492c-a27e-37b9f308d18d">
-      <database-info product="MySQL" version="5.7.26-log" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.21 (Revision: 33f65445a1bcc544eb0120491926484da168f199)" dbms="MYSQL" exact-version="5.7.26" exact-driver-version="8.0">
+    <data-source name="可分可合环境C 专属云" uuid="365c6669-c4eb-492c-a27e-37b9f308d18d">
+      <database-info product="MySQL" version="5.7.33-log" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.21 (Revision: 33f65445a1bcc544eb0120491926484da168f199)" dbms="MYSQL" exact-version="5.7.33" exact-driver-version="8.0">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
       <secret-storage>master_key</secret-storage>
-      <user-name>root</user-name>
+      <user-name>username2021</user-name>
       <schema-mapping>
         <introspection-scope>
           <node kind="schema">
@@ -49,13 +49,13 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
-    <data-source name="CentOS6.5主库" uuid="08a4642a-42bb-4254-be50-a67fb119268e">
+    <data-source name="centos6.5 mysql主库" uuid="08a4642a-42bb-4254-be50-a67fb119268e">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
       <schema-mapping />
     </data-source>
-    <data-source name="CentOS6.5从库" uuid="68f63b64-394b-4a8c-b611-2f46a5c03b65">
+    <data-source name="centos6.5 mysql从库" uuid="68f63b64-394b-4a8c-b611-2f46a5c03b65">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
@@ -79,7 +79,7 @@
         <ssh-config-id>254606c1-ea08-4fab-b7f4-e5f27efbb17e</ssh-config-id>
       </ssh-properties>
     </data-source>
-    <data-source name="yonsuite日常ok" uuid="da585ba9-c5ae-4854-8d0e-0ab75233a518">
+    <data-source name="yonsuite日常ok 读库" uuid="da585ba9-c5ae-4854-8d0e-0ab75233a518">
       <database-info product="MySQL" version="8.0.13" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.21 (Revision: 33f65445a1bcc544eb0120491926484da168f199)" dbms="MYSQL" exact-version="8.0.13" exact-driver-version="8.0">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
@@ -114,7 +114,7 @@
         <ssh-config-id>ebb22c0f-61f1-4664-970a-29413592b8ac</ssh-config-id>
       </ssh-properties>
     </data-source>
-    <data-source name="yonsuite生产" uuid="0d6c216e-e31b-4295-8408-a024b2de964c">
+    <data-source name="yonsuite生产 读库" uuid="0d6c216e-e31b-4295-8408-a024b2de964c">
       <database-info product="MySQL" version="5.7.25-log" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.15 (Revision: 79a4336f140499bd22dd07f02b708e163844e3d5)" dbms="MYSQL" exact-version="5.7.25" exact-driver-version="8.0">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
@@ -132,7 +132,7 @@
       </schema-mapping>
     </data-source>
     <data-source name="九院A环境" uuid="afcac237-de5f-4331-abc3-4da8cd1483d3">
-      <database-info product="MySQL" version="5.7.27-log" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.15 (Revision: 79a4336f140499bd22dd07f02b708e163844e3d5)" dbms="MYSQL" exact-version="5.7.27" exact-driver-version="8.0">
+      <database-info product="MySQL" version="5.7.27-log" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.21 (Revision: 33f65445a1bcc544eb0120491926484da168f199)" dbms="MYSQL" exact-version="5.7.27" exact-driver-version="8.0">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
       </database-info>
@@ -159,7 +159,7 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
-    <data-source name="yonsuite日常" uuid="f291edd6-847a-4cec-99bf-a85bed84e038">
+    <data-source name="yonsuite日常 读库" uuid="f291edd6-847a-4cec-99bf-a85bed84e038">
       <database-info product="MySQL" version="8.0.13" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.21 (Revision: 33f65445a1bcc544eb0120491926484da168f199)" dbms="MYSQL" exact-version="8.0.13" exact-driver-version="8.0">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
@@ -173,7 +173,7 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
-    <data-source name="yonsuite沙箱" uuid="4a842319-f83c-49ae-b2c4-106e393e9bba">
+    <data-source name="yonsuite沙箱 读库" uuid="4a842319-f83c-49ae-b2c4-106e393e9bba">
       <database-info product="MySQL" version="5.7.29-4-log" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.21 (Revision: 33f65445a1bcc544eb0120491926484da168f199)" dbms="MYSQL" exact-version="5.7.29" exact-driver-version="8.0">
         <extra-name-characters>#@</extra-name-characters>
         <identifier-quote-string>`</identifier-quote-string>
@@ -186,6 +186,70 @@
           <node kind="schema">
             <name qname="@" />
             <name qname="ugoods" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="可分可合环境A 专属云" uuid="cba95b3b-ce74-42e9-9b7e-92f5a28da37a">
+      <database-info product="MySQL" version="5.7.33-log" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.21 (Revision: 33f65445a1bcc544eb0120491926484da168f199)" dbms="MYSQL" exact-version="5.7.33" exact-driver-version="8.0">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>username2021</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="@" />
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="可分可合环境B 专属云" uuid="48447dc2-0829-4efd-bdca-d1254350be72">
+      <database-info product="MySQL" version="5.7.33-log" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.21 (Revision: 33f65445a1bcc544eb0120491926484da168f199)" dbms="MYSQL" exact-version="5.7.33" exact-driver-version="8.0">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="@" />
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="营销云itg环境" uuid="6008375d-478e-4720-b800-652e59d1724d">
+      <database-info product="MySQL" version="5.7.26-log" jdbc-version="4.2" driver-name="MySQL Connector/J" driver-version="mysql-connector-java-8.0.21 (Revision: 33f65445a1bcc544eb0120491926484da168f199)" dbms="MYSQL" exact-version="5.7.26" exact-driver-version="8.0">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema" qname="@" />
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="九院mongodb" uuid="4f1f4933-14a8-4d34-b4c7-6c654a16e930">
+      <database-info product="Mongo DB" version="4.0.11" jdbc-version="4.2" driver-name="MongoDB JDBC Driver" driver-version="1.9.1" dbms="MONGO" exact-version="4.0.11" exact-driver-version="1.9" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>admin</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema">
+            <name qname="@" />
+            <name qname="admin" />
+            <name qname="busiglossary" />
+            <name qname="config" />
+            <name qname="lightapp_one_for_all" />
+            <name qname="local" />
+            <name qname="metadata" />
+            <name qname="metadata_history" />
+            <name qname="metadata_tenant" />
+            <name qname="stellar" />
           </node>
         </introspection-scope>
       </schema-mapping>
