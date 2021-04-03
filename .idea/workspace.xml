@@ -4,31 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9cae0b1d-fa9e-4477-9c04-b936e6df5af0" name="Default Changelist" comment="日常提交">
-      <change afterPath="$PROJECT_DIR$/笔记/bill/2021/202104.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/笔记/事件中心/doc.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/笔记/开放平台/doc.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="9cae0b1d-fa9e-4477-9c04-b936e6df5af0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/任务/yonsuite/附件分组/附件分组列表.xlsm" beforeDir="false" afterPath="$PROJECT_DIR$/任务/yonsuite/附件分组/附件分组列表.xlsm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/其它/caozhi1.sql" beforeDir="false" afterPath="$PROJECT_DIR$/其它/caozhi1.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/其它/caozhi2.sql" beforeDir="false" afterPath="$PROJECT_DIR$/其它/caozhi2.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/其它/caozhi3.sql" beforeDir="false" afterPath="$PROJECT_DIR$/其它/caozhi3.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/其它/caozhi5.sql" beforeDir="false" afterPath="$PROJECT_DIR$/其它/caozhi5.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/其它/caozhi7.sql" beforeDir="false" afterPath="$PROJECT_DIR$/其它/caozhi7.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/UI元数据/bill.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/UI元数据/bill.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/UI元数据/doc.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/UI元数据/doc.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/bill/2021/202103.txt" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/bill/2021/202103.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/cmd.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/commonSQL.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/devstep.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/password.txt" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/password.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/yonsuite/doc.sql" beforeDir="false" afterPath="$PROJECT_DIR$/笔记/yonbip/doc.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/多语.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/用户 角色 权限 菜单.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/申波讲解项目架构.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/笔记/程云吉书签.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
