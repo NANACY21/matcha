@@ -108,5 +108,12 @@
       <jdbc-url>mongodb://172.20.53.249:30020</jdbc-url>
       <working-dir>$ProjectFileDir$</working-dir>
     </data-source>
+    <data-source source="LOCAL" name="营销C环境" uuid="e2e751c8-d846-4f28-9cbe-8131cc2b21ca">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://172.20.46.182:3306/ugoods?useUnicode=true&amp;characterEncoding=utf-8&amp;allowMultiQueries=true</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>

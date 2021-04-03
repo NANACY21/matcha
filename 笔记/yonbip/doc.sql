@@ -68,10 +68,7 @@ defaultreferrule 再做一下
 规格 数字化工作入口（单组织）
 应用 基础数据
 
-[API]
-分页的api入参带condition
-列表的是simple 见仓库列表查询
-simpleVOs为根节点的 废弃！
+
 
 
 [客户分类]
@@ -151,8 +148,9 @@ B环境：已废弃
 
 九院元数据补丁 九院A环境（测试环境）是要的 测试环境xml打成补丁 测试环境xml与公有云日常 预发不同 因此不能从日常下载json
 要登技术中台安装器 业务中台 下载安装报告 以连接mogodb
-select * from metadata.metaclass where uri={实体1，实体2}
-查询结果导出json 命名为metaclass.json放入补丁里 至此，九院元数据补丁ok 货位那种和日常预发一样的 直接下载日常的json放到补丁里即可。
+select *
+from metadata.metaclass
+where uri = {实体1，实体2} 查询结果导出json 命名为metaclass.json放入补丁里 至此，九院元数据补丁ok 货位那种和日常预发一样的 直接下载日常的json放到补丁里即可。
 
 
 
@@ -173,3 +171,43 @@ sql(表，ui数据) 李篪
 
 
 传参赋值 对象赋值 -> 影响生成的sql，
+
+瞩目会议 用友邮箱/zxcvbnm123
+[物料档案]
+批改 走extend服务
+
+断点没断到：
+1.开extend服务调试实例并连接
+2.用本地服务调用
+
+1.调试实例;
+2.QuerySchema
+
+
+SQL平台审核专用流水线
+RuleOperatorProxy.java
+
+
+
+
+[后端域名]
+    u8c3-upc-extend-server
+        [测试]extupcb-yonsuite-test.yyuap.com
+        [日常]extupcb-yonsuite-daily.yyuap.com
+        [预发]extupcb-yonsuite-pre.diwork.com
+        [生产]extupcb-yonsuite.diwork.com
+
+专属化营销C
+iuap-release-20210320
+
+初始化脚本 data.sql
+升级脚本
+
+
+
+
+
+
+专属化：
+提代码到指定分支 执行iuap5-upc-server202105
+/data/iuap_installer/product_patch/
